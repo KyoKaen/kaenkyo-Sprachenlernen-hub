@@ -230,10 +230,10 @@
 
         .page-link-group {
             display: flex;
-            gap: 4px;
+            gap: 2px;
             font-weight: bold;
             color: var(--brand-plum);
-            width: 70px;
+            width: 85px;
             justify-content: flex-end;
             flex-shrink: 0;
         }
@@ -286,7 +286,7 @@
             color: var(--text-muted);
         }
 
-        /* --- BOOK PAGE PARSING & INTERFACE LAYOUTS (PAGES 108 & 109) --- */
+        /* --- BOOK PAGE PARSING & INTERFACE LAYOUTS --- */
         .page-render-container {
             background-color: #FFFFFF;
             padding: 40px;
@@ -360,44 +360,63 @@
             padding-bottom: 4px;
         }
 
-        .m-highlight {
-            font-weight: bold;
-            color: #D32F2F;
-        }
-
         /* Exercise layout engine */
         .exercise-headline {
             display: flex;
             align-items: center;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: var(--exercise-blue);
+            margin-top: 35px;
+            margin-bottom: 18px;
+            color: var(--text-dark);
             font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .exercise-headline strong {
+            color: #C62828;
+            margin-right: 5px;
         }
 
         .exercise-num-badge {
-            background-color: var(--exercise-blue);
+            background-color: #2D3136;
             color: white;
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             display: inline-block;
             text-align: center;
-            line-height: 24px;
-            margin-right: 10px;
-            font-size: 0.85rem;
+            line-height: 26px;
+            margin-right: 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .exercise-sub-instruction {
+            font-size: 0.95rem;
+            color: #C62828;
+            font-weight: 500;
+            margin-top: -12px;
+            margin-bottom: 15px;
+            padding-left: 38px;
         }
 
         .exercise-input-line {
-            margin-bottom: 12px;
-            padding-left: 10px;
+            margin-bottom: 14px;
+            padding-left: 38px;
             font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .exercise-input-line p strong {
+            color: #2D3136;
+            display: block;
+            margin-bottom: 4px;
         }
 
         .inline-blank {
             border: none;
             border-bottom: 1px solid var(--text-dark);
-            width: 140px;
+            width: 150px;
             padding: 2px 5px;
             font-size: 0.95rem;
             color: #1565C0;
@@ -413,11 +432,12 @@
 
         .full-width-blank {
             width: 100%;
-            margin-top: 5px;
+            margin-top: 6px;
             border: none;
             border-bottom: 1px solid var(--text-muted);
-            padding: 4px;
-            font-size: 0.95rem;
+            padding: 6px 4px;
+            font-size: 1rem;
+            color: #1565C0;
         }
 
         .full-width-blank:focus {
@@ -425,40 +445,72 @@
             border-bottom: 2px solid var(--exercise-blue);
         }
 
-        .radio-option-group {
-            display: inline-flex;
-            gap: 15px;
-            margin-left: 10px;
+        .options-bank-box {
+            background-color: #F1F3F5;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            margin-left: 38px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+            color: #495057;
+            display: inline-block;
         }
 
         .tip-box-lightbulb {
-            background-color: #E8F5E9;
-            border: 1px solid #A5D6A7;
+            background-color: #FFFDE7;
+            border: 1px solid #FFF59D;
             border-radius: 6px;
             padding: 15px;
-            margin: 25px 0;
+            margin: 25px 0 25px 38px;
             display: flex;
             gap: 15px;
             align-items: center;
+            max-width: 320px;
+        }
+
+        .example-hint-tag {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-style: italic;
+            border-left: 4px solid #4CAF50;
+            margin-left: 20px;
+            max-width: 300px;
+        }
+
+        .flex-exercise-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .flex-exercise-main {
+            flex-grow: 1;
         }
 
         /* Navigation buttons layout inside content area */
         .page-navigation-footer {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
+            margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
 
         .nav-btn {
-            padding: 8px 16px;
+            padding: 10px 20px;
             background-color: var(--brand-plum);
             color: white;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
         }
 
         .nav-btn:hover {
@@ -500,15 +552,15 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Verben 1</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">1</span><span class="chapter-example">Ich, du, er, sie, es, wir, ihr, sie <em>und</em> Sie</span><span class="chapter-topic">Personalpronomen</span><div class="page-link-group"><a href="#page-10" class="page-link">10</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">2</span><span class="chapter-example">Ich komme, du kommst</span><span class="chapter-topic">Konjugation Präsens</span><div class="page-link-group"><a href="#page-12" class="page-link">12</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">3</span><span class="chapter-example">Ich bin, du hast, er möchte</span><span class="chapter-topic"><em>Sein, haben</em> und besondere Verben</span><div class="page-link-group"><a href="#page-14" class="page-link">14</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">4</span><span class="chapter-example">Ich esse wenig, aber du isst viel!</span><span class="chapter-topic">Verben mit Vokalwechsel</span><div class="page-link-group"><a href="#page-16" class="page-link">16</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">5</span><span class="chapter-example">Ich muss, ich kann, ich will</span><span class="chapter-topic">Modalverben: Konjugation und Position im Satz</span><div class="page-link-group"><a href="#page-18" class="page-link">18</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">6</span><span class="chapter-example">Ich kann, ich will, ich möchte</span><span class="chapter-topic">Modalverben: Gebrauch 1</span><div class="page-link-group"><a href="#page-20" class="page-link">20</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">7</span><span class="chapter-example">Ich muss, ich soll, ich darf</span><span class="chapter-topic">Modalverben: Gebrauch 2</span><div class="page-link-group"><a href="#page-22" class="page-link">22</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">8</span><span class="chapter-example">Ich kaufe im Supermarkt ein</span><span class="chapter-topic">Trennbare Verben</span><div class="page-link-group"><a href="#page-24" class="page-link">24</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">9</span><span class="chapter-example">Helfen Sie mir!</span><span class="chapter-topic">Imperativ</span><div class="page-link-group"><a href="#page-26" class="page-link">26</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">1</span><span class="chapter-example">Ich, du, er, sie, es, wir, ihr, sie <em>und</em> Sie</span><span class="chapter-topic">Personalpronomen</span><div class="page-link-group"><a href="#page-10" class="page-link">10</a>–<a href="#page-11" class="page-link">11</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">2</span><span class="chapter-example">Ich komme, du kommst</span><span class="chapter-topic">Konjugation Präsens</span><div class="page-link-group"><a href="#page-12" class="page-link">12</a>–<a href="#page-13" class="page-link">13</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">3</span><span class="chapter-example">Ich bin, du hast, er möchte</span><span class="chapter-topic"><em>Sein, haben</em> und besondere Verben</span><div class="page-link-group"><a href="#page-14" class="page-link">14</a>–<a href="#page-15" class="page-link">15</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">4</span><span class="chapter-example">Ich esse wenig, aber du isst viel!</span><span class="chapter-topic">Verben mit Vokalwechsel</span><div class="page-link-group"><a href="#page-16" class="page-link">16</a>–<a href="#page-17" class="page-link">17</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">5</span><span class="chapter-example">Ich muss, ich kann, ich will</span><span class="chapter-topic">Modalverben: Konjugation und Position im Satz</span><div class="page-link-group"><a href="#page-18" class="page-link">18</a>–<a href="#page-19" class="page-link">19</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">6</span><span class="chapter-example">Ich kann, ich will, ich möchte</span><span class="chapter-topic">Modalverben: Gebrauch 1</span><div class="page-link-group"><a href="#page-20" class="page-link">20</a>–<a href="#page-21" class="page-link">21</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">7</span><span class="chapter-example">Ich muss, ich soll, ich darf</span><span class="chapter-topic">Modalverben: Gebrauch 2</span><div class="page-link-group"><a href="#page-22" class="page-link">22</a>–<a href="#page-23" class="page-link">23</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">8</span><span class="chapter-example">Ich kaufe im Supermarkt ein</span><span class="chapter-topic">Trennbare Verben</span><div class="page-link-group"><a href="#page-24" class="page-link">24</a>–<a href="#page-25" class="page-link">25</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">9</span><span class="chapter-example">Helfen Sie mir!</span><span class="chapter-topic">Imperativ</span><div class="page-link-group"><a href="#page-26" class="page-link">26</a>–<a href="#page-27" class="page-link">27</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-a1">A1</span><span class="partner-title">Partnerseite 1: Konjugation (Wechselspiel)</span><div class="page-link-group"><a href="#page-28" class="page-link">28</a></div></li>
             </ul>
         </section>
@@ -516,10 +568,10 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Sätze und Fragen</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">10</span><span class="chapter-example">Wer? Wie? Wo? Was?</span><span class="chapter-topic">Fragen mit Fragewort</span><div class="page-link-group"><a href="#page-30" class="page-link">30</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">11</span><span class="chapter-example">Lernen Sie Deutsch?</span><span class="chapter-topic">Ja-/Nein-Fragen und Antworten</span><div class="page-link-group"><a href="#page-32" class="page-link">32</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">12</span><span class="chapter-example">Am Abend essen wir Pizza</span><span class="chapter-topic">Position 2 im Satz</span><div class="page-link-group"><a href="#page-34" class="page-link">34</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">13</span><span class="chapter-example">Ich gehe ... schwimmen</span><span class="chapter-topic">Zwei feste Positionen im Satz</span><div class="page-link-group"><a href="#page-36" class="page-link">36</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">10</span><span class="chapter-example">Wer? Wie? Wo? Was?</span><span class="chapter-topic">Fragen mit Fragewort</span><div class="page-link-group"><a href="#page-30" class="page-link">30</a>–<a href="#page-31" class="page-link">31</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">11</span><span class="chapter-example">Lernen Sie Deutsch?</span><span class="chapter-topic">Ja-/Nein-Fragen und Antworten</span><div class="page-link-group"><a href="#page-32" class="page-link">32</a>–<a href="#page-33" class="page-link">33</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">12</span><span class="chapter-example">Am Abend essen wir Pizza</span><span class="chapter-topic">Position 2 im Satz</span><div class="page-link-group"><a href="#page-34" class="page-link">34</a>–<a href="#page-35" class="page-link">35</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">13</span><span class="chapter-example">Ich gehe ... schwimmen</span><span class="chapter-topic">Zwei feste Positionen im Satz</span><div class="page-link-group"><a href="#page-36" class="page-link">36</a>–<a href="#page-37" class="page-link">37</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-a1">A1</span><span class="partner-title">Partnerseite 2: Fragen (Wechselspiel)</span><div class="page-link-group"><a href="#page-38" class="page-link">38</a></div></li>
             </ul>
         </section>
@@ -527,31 +579,31 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Pronomen, Nomen und Artikel</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">14</span><span class="chapter-example">Die Männer, die Frauen, die Babys</span><span class="chapter-topic">Nomen: Plural</span><div class="page-link-group"><a href="#page-40" class="page-link">40</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">15</span><span class="chapter-example">Der, das die – ein, ein, eine</span><span class="chapter-topic">Artikel: definit, indefinit, kein Artikel</span><div class="page-link-group"><a href="#page-42" class="page-link">42</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">16</span><span class="chapter-example">Ich koche nicht. Ich habe keine Zeit.</span><span class="chapter-topic">Negation</span><div class="page-link-group"><a href="#page-44" class="page-link">44</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">17</span><span class="chapter-example">Der Mann isst den Fisch</span><span class="chapter-topic">Akkusativ</span><div class="page-link-group"><a href="#page-46" class="page-link">46</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">18</span><span class="chapter-example">Ich fahre mit dem Auto</span><span class="chapter-topic">Dativ</span><div class="page-link-group"><a href="#page-48" class="page-link">48</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">19</span><span class="chapter-example">Mein, dein, unser</span><span class="chapter-topic">Possessivartikel</span><div class="page-link-group"><a href="#page-50" class="page-link">50</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">20</span><span class="chapter-example">Welcher? – Dieser!</span><span class="chapter-topic">Artikel: interrogativ und demonstrativ</span><div class="page-link-group"><a href="#page-52" class="page-link">52</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">21</span><span class="chapter-example">Nur mit dir – nie ohne dich</span><span class="chapter-topic">Personalpronomen: Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-54" class="page-link">54</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">22</span><span class="chapter-example">Ich kaufe meinem Sohn einen Ball</span><span class="chapter-topic">Verben mit Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-56" class="page-link">56</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">23</span><span class="chapter-example">Ich helfe dir, du dankst mir</span><span class="chapter-topic">Verben mit Dativ</span><div class="page-link-group"><a href="#page-58" class="page-link">58</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">24</span><span class="chapter-example">Wem schenkst du was?</span><span class="chapter-topic">Frage nach Personen und Sachen</span><div class="page-link-group"><a href="#page-60" class="page-link">60</a></div></li>
-                <li class="toc-item partner-item"><span class="level-badge badge-a2">A2</span><span class="partner-title">Partnerseite 3: Akkusativ und Dativ (zusammen eine Geschichte erzählen)</span><div class="page-link-group"><a href="#page-62" class="page-link">62</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">14</span><span class="chapter-example">Die Männer, die Frauen, die Babys</span><span class="chapter-topic">Nomen: Plural</span><div class="page-link-group"><a href="#page-40" class="page-link">40</a>–<a href="#page-41" class="page-link">41</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">15</span><span class="chapter-example">Der, das die – ein, ein, eine</span><span class="chapter-topic">Artikel: definit, indefinit, kein Artikel</span><div class="page-link-group"><a href="#page-42" class="page-link">42</a>–<a href="#page-43" class="page-link">43</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">16</span><span class="chapter-example">Ich koche nicht. Ich habe keine Zeit.</span><span class="chapter-topic">Negation</span><div class="page-link-group"><a href="#page-44" class="page-link">44</a>–<a href="#page-45" class="page-link">45</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">17</span><span class="chapter-example">Der Mann isst den Fisch</span><span class="chapter-topic">Akkusativ</span><div class="page-link-group"><a href="#page-46" class="page-link">46</a>–<a href="#page-47" class="page-link">47</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">18</span><span class="chapter-example">Ich fahre mit dem Auto</span><span class="chapter-topic">Dativ</span><div class="page-link-group"><a href="#page-48" class="page-link">48</a>–<a href="#page-49" class="page-link">49</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">19</span><span class="chapter-example">Mein, dein, unser</span><span class="chapter-topic">Possessivartikel</span><div class="page-link-group"><a href="#page-50" class="page-link">50</a>–<a href="#page-51" class="page-link">51</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">20</span><span class="chapter-example">Welcher? – Dieser!</span><span class="chapter-topic">Artikel: interrogativ und demonstrativ</span><div class="page-link-group"><a href="#page-52" class="page-link">52</a>–<a href="#page-53" class="page-link">53</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">21</span><span class="chapter-example">Nur mit dir – nie ohne dich</span><span class="chapter-topic">Personalpronomen: Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-54" class="page-link">54</a>–<a href="#page-55" class="page-link">55</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">22</span><span class="chapter-example">Ich kaufe meinem Sohn einen Ball</span><span class="chapter-topic">Verben mit Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-56" class="page-link">56</a>–<a href="#page-57" class="page-link">57</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">23</span><span class="chapter-example">Ich helfe dir, du dankst mir</span><span class="chapter-topic">Verben mit Dativ</span><div class="page-link-group"><a href="#page-58" class="page-link">58</a>–<a href="#page-59" class="page-link">59</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">24</span><span class="chapter-example">Wem schenkst du was?</span><span class="chapter-topic">Frage nach Personen und Sachen</span><div class="page-link-group"><a href="#page-60" class="page-link">60</a>–<a href="#page-61" class="page-link">61</a></div></li>
+                <li class="toc-item partner-item"><span class="level-badge badge-a2">A2</span><span class="partner-title">Partnerseite 3: Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-62" class="page-link">62</a></div></li>
             </ul>
         </section>
 
         <section class="toc-section">
             <h3 class="toc-section-title">Verben 2</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">25</span><span class="chapter-example">Ich war, ich hatte</span><span class="chapter-topic"><em>Präteritum: sein und haben</em></span><div class="page-link-group"><a href="#page-64" class="page-link">64</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">26</span><span class="chapter-example">Was hast du gestern gemacht?</span><span class="chapter-topic">Perfekt mit <em>haben</em></span><div class="page-link-group"><a href="#page-66" class="page-link">66</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">27</span><span class="chapter-example">Ich bin gekommen, ich habe gelacht</span><span class="chapter-topic">Perfekt mit <em>sein</em></span><div class="page-link-group"><a href="#page-68" class="page-link">68</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">28</span><span class="chapter-example">Gesehen – eingekauft – bezahlt</span><span class="chapter-topic">Partizip Perfekt (Partizip 2)</span><div class="page-link-group"><a href="#page-70" class="page-link">70</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">29</span><span class="chapter-example">Ich konnte, ich musste, ich wollte</span><span class="chapter-topic">Präteritum: Modalverben</span><div class="page-link-group"><a href="#page-72" class="page-link">72</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">30</span><span class="chapter-example">Gestern hatte er Zeit und hat Sport gemacht</span><span class="chapter-topic">Zeitengebrauch</span><div class="page-link-group"><a href="#page-74" class="page-link">74</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">31</span><span class="chapter-example">Sie wäscht sich</span><span class="chapter-topic">Reflexive (und reziproke) Verben</span><div class="page-link-group"><a href="#page-76" class="page-link">76</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">25</span><span class="chapter-example">Ich war, ich hatte</span><span class="chapter-topic">Präteritum: <em>sein</em> und <em>haben</em></span><div class="page-link-group"><a href="#page-64" class="page-link">64</a>–<a href="#page-65" class="page-link">65</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">26</span><span class="chapter-example">Was hast du gestern gemacht?</span><span class="chapter-topic">Perfekt mit <em>haben</em></span><div class="page-link-group"><a href="#page-66" class="page-link">66</a>–<a href="#page-67" class="page-link">67</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">27</span><span class="chapter-example">Ich bin gekommen, ich habe gelacht</span><span class="chapter-topic">Perfekt mit <em>sein</em></span><div class="page-link-group"><a href="#page-68" class="page-link">68</a>–<a href="#page-69" class="page-link">69</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">28</span><span class="chapter-example">Gesehen – eingekauft – bezahlt</span><span class="chapter-topic">Partizip Perfekt (Partizip 2)</span><div class="page-link-group"><a href="#page-70" class="page-link">70</a>–<a href="#page-71" class="page-link">71</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">29</span><span class="chapter-example">Ich konnte, ich musste, ich wollte</span><span class="chapter-topic">Präteritum: Modalverben</span><div class="page-link-group"><a href="#page-72" class="page-link">72</a>–<a href="#page-73" class="page-link">73</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">30</span><span class="chapter-example">Gestern hatte er Zeit und hat Sport gemacht</span><span class="chapter-topic">Zeitengebrauch</span><div class="page-link-group"><a href="#page-74" class="page-link">74</a>–<a href="#page-75" class="page-link">75</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">31</span><span class="chapter-example">Sie wäscht sich</span><span class="chapter-topic">Reflexive (und reziproke) Verben</span><div class="page-link-group"><a href="#page-76" class="page-link">76</a>–<a href="#page-77" class="page-link">77</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-a2">A2</span><span class="partner-title">Partnerseite 4: Perfekt (Würfelspiel)</span><div class="page-link-group"><a href="#page-78" class="page-link">78</a></div></li>
             </ul>
         </section>
@@ -559,14 +611,14 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Präpositionen 1</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">32</span><span class="chapter-example">Im, am, um, von ... bis, nach, vor</span><span class="chapter-topic">Temporale Präpositionen</span><div class="page-link-group"><a href="#page-80" class="page-link">80</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">33</span><span class="chapter-example">Aus, bei, mit, nach, seit, von, zu</span><span class="chapter-topic">Präpositionen mit Dativ</span><div class="page-link-group"><a href="#page-82" class="page-link">82</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">34</span><span class="chapter-example">Für, um, durch, ohne, gegen</span><span class="chapter-topic">Präpositionen mit Akkusativ</span><div class="page-link-group"><a href="#page-84" class="page-link">84</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">35</span><span class="chapter-example">Wo? Im Kino</span><span class="chapter-topic">Wechselpräpositionen mit Dativ</span><div class="page-link-group"><a href="#page-86" class="page-link">86</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">36</span><span class="chapter-example">Im Kino oder ins Kino?</span><span class="chapter-topic">Wechselpräpositionen mit Dativ und Akkusativ</span><div class="page-link-group"><a href="#page-88" class="page-link">88</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">37</span><span class="chapter-example">Ich gehe zum Arzt und auf den Markt</span><span class="chapter-topic">Lokale Präpositionen: <em>Wohin?</em></span><div class="page-link-group"><a href="#page-90" class="page-link">90</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">38</span><span class="chapter-example">Ich war beim Arzt und bin jetzt auf dem Markt</span><span class="chapter-topic">Lokale Präpositionen: <em>Wo?</em></span><div class="page-link-group"><a href="#page-92" class="page-link">92</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">39</span><span class="chapter-example">Ich komme aus den Bergen vom Skifahren</span><span class="chapter-topic">Lokale Präpositionen: <em>Woher?</em></span><div class="page-link-group"><a href="#page-94" class="page-link">94</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">32</span><span class="chapter-example">Im, am, um, von ... bis, nach, vor</span><span class="chapter-topic">Temporale Präpositionen</span><div class="page-link-group"><a href="#page-80" class="page-link">80</a>–<a href="#page-81" class="page-link">81</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">33</span><span class="chapter-example">Aus, bei, mit, nach, seit, von, zu</span><span class="chapter-topic">Präpositionen mit Dativ</span><div class="page-link-group"><a href="#page-82" class="page-link">82</a>–<a href="#page-83" class="page-link">83</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">34</span><span class="chapter-example">Für, um, durch, ohne, gegen</span><span class="chapter-topic">Präpositionen mit Akkusativ</span><div class="page-link-group"><a href="#page-84" class="page-link">84</a>–<a href="#page-85" class="page-link">85</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">35</span><span class="chapter-example">Wo? Im Kino</span><span class="chapter-topic">Wechselpräpositionen mit Dativ</span><div class="page-link-group"><a href="#page-86" class="page-link">86</a>–<a href="#page-87" class="page-link">87</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">36</span><span class="chapter-example">Im Kino oder ins Kino?</span><span class="chapter-topic">Wechselpräpositionen mit Dativ und Akkusativ</span><div class="page-link-group"><a href="#page-88" class="page-link">88</a>–<a href="#page-89" class="page-link">89</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">37</span><span class="chapter-example">Ich gehe zum Arzt und auf den Markt</span><span class="chapter-topic">Lokale Präpositionen: <em>Wohin?</em></span><div class="page-link-group"><a href="#page-90" class="page-link">90</a>–<a href="#page-91" class="page-link">91</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">38</span><span class="chapter-example">Ich war beim Arzt und bin jetzt auf dem Markt</span><span class="chapter-topic">Lokale Präpositionen: <em>Wo?</em></span><div class="page-link-group"><a href="#page-92" class="page-link">92</a>–<a href="#page-93" class="page-link">93</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">39</span><span class="chapter-example">Ich komme aus den Bergen vom Skifahren</span><span class="chapter-topic">Lokale Präpositionen: <em>Woher?</em></span><div class="page-link-group"><a href="#page-94" class="page-link">94</a>–<a href="#page-95" class="page-link">95</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-a2">A2</span><span class="partner-title">Partnerseite 5: Wechselpräpositionen (Malspiel)</span><div class="page-link-group"><a href="#page-96" class="page-link">96</a></div></li>
             </ul>
         </section>
@@ -576,10 +628,10 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Adjektive 1</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">40</span><span class="chapter-example">Ein netter Mann! Ich liebe den netten Mann</span><span class="chapter-topic">Nominativ und Akkusativ</span><div class="page-link-group"><a href="#page-98" class="page-link">98</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">41</span><span class="chapter-example">Am ersten Mai</span><span class="chapter-topic">Nominativ, Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-100" class="page-link">100</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">42</span><span class="chapter-example">Schneller als ...</span><span class="chapter-topic">Komparativ und Vergleichssätze</span><div class="page-link-group"><a href="#page-102" class="page-link">102</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">43</span><span class="chapter-example">Der kleinste Mann läuft am schnellsten</span><span class="chapter-topic">Superlativ</span><div class="page-link-group"><a href="#page-104" class="page-link">104</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">40</span><span class="chapter-example">Ein netter Mann! Ich liebe den netten Mann</span><span class="chapter-topic">Nominativ und Akkusativ</span><div class="page-link-group"><a href="#page-98" class="page-link">98</a>–<a href="#page-99" class="page-link">99</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">41</span><span class="chapter-example">Am ersten Mai</span><span class="chapter-topic">Nominativ, Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-100" class="page-link">100</a>–<a href="#page-101" class="page-link">101</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">42</span><span class="chapter-example">Schneller als ...</span><span class="chapter-topic">Komparativ und Vergleichssätze</span><div class="page-link-group"><a href="#page-102" class="page-link">102</a>–<a href="#page-103" class="page-link">103</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">43</span><span class="chapter-example">Der kleinste Mann läuft am schnellsten</span><span class="chapter-topic">Superlativ</span><div class="page-link-group"><a href="#page-104" class="page-link">104</a>–<a href="#page-105" class="page-link">105</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-a2">A2</span><span class="partner-title">Partnerseite 6: Adjektivdeklination (Würfelspiel)</span><div class="page-link-group"><a href="#page-106" class="page-link">106</a></div></li>
             </ul>
         </section>
@@ -588,8 +640,8 @@
             <h3 class="toc-section-title">Sätze und Satzverbindungen 1</h3>
             <ul class="toc-list">
                 <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">44</span><span class="chapter-example">Und, aber, oder, denn</span><span class="chapter-topic">Hauptsätze verbinden (Position 0)</span><div class="page-link-group"><a href="#page-108" class="page-link">108</a>–<a href="#page-109" class="page-link">109</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">45</span><span class="chapter-example">Deshalb, sonst, dann, danach</span><span class="chapter-topic">Hauptsätze verbinden (Position 1)</span><div class="page-link-group"><a href="#page-110" class="page-link">110</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">46</span><span class="chapter-example">..., weil ich Deutsch lernen möchte.</span><span class="chapter-topic">Nebensätze mit <em>weil, wenn</em> und <em>dass</em></span><div class="page-link-group"><a href="#page-112" class="page-link">112</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">45</span><span class="chapter-example">Deshalb, sonst, dann, danach</span><span class="chapter-topic">Hauptsätze verbinden (Position 1)</span><div class="page-link-group"><a href="#page-110" class="page-link">110</a>–<a href="#page-111" class="page-link">111</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">46</span><span class="chapter-example">..., weil ich Deutsch lernen möchte.</span><span class="chapter-topic">Nebensätze mit <em>weil, wenn</em> und <em>dass</em></span><div class="page-link-group"><a href="#page-112" class="page-link">112</a>–<a href="#page-113" class="page-link">113</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-a2">A2</span><span class="partner-title">Partnerseite 7: Nebensätze (Wechselspiel)</span><div class="page-link-group"><a href="#page-114" class="page-link">114</a></div></li>
             </ul>
         </section>
@@ -597,33 +649,33 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Wörter und Wortbildung</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">47</span><span class="chapter-example">Kinderarzt oder Arztkinder?</span><span class="chapter-topic">Komposita</span><div class="page-link-group"><a href="#page-116" class="page-link">116</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">48</span><span class="chapter-example">Ich bin dann mal weg</span><span class="chapter-topic">Zusammengesetzte Verben</span><div class="page-link-group"><a href="#page-118" class="page-link">118</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">49</span><span class="chapter-example">Der, die <em>oder</em> das?</span><span class="chapter-topic">Genusregeln</span><div class="page-link-group"><a href="#page-120" class="page-link">120</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">50</span><span class="chapter-example">Was heißt das denn?</span><span class="chapter-topic">Partikeln</span><div class="page-link-group"><a href="#page-122" class="page-link">122</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">51</span><span class="chapter-example">-chen, -lein, -er, -in, -ung</span><span class="chapter-topic">Aus Wörtern neue Wörter machen</span><div class="page-link-group"><a href="#page-124" class="page-link">124</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">52</span><span class="chapter-example">Nicht <em>und</em> nichts, noch nicht <em>und</em> nicht mehr</span><span class="chapter-topic">Negationswörter</span><div class="page-link-group"><a href="#page-126" class="page-link">126</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">53</span><span class="chapter-example">Ich bin oben. Komm auch nach oben.</span><span class="chapter-topic">Lokale Adverbien: Position und Direktion</span><div class="page-link-group"><a href="#page-128" class="page-link">128</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">47</span><span class="chapter-example">Kinderarzt oder Arztkinder?</span><span class="chapter-topic">Komposita</span><div class="page-link-group"><a href="#page-116" class="page-link">116</a>–<a href="#page-117" class="page-link">117</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">48</span><span class="chapter-example">Ich bin dann mal weg</span><span class="chapter-topic">Zusammengesetzte Verben</span><div class="page-link-group"><a href="#page-118" class="page-link">118</a>–<a href="#page-119" class="page-link">119</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a1">A1</span><span class="chapter-num">49</span><span class="chapter-example">Der, die <em>oder</em> das?</span><span class="chapter-topic">Genusregeln</span><div class="page-link-group"><a href="#page-120" class="page-link">120</a>–<a href="#page-121" class="page-link">121</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">50</span><span class="chapter-example">Was heißt das denn?</span><span class="chapter-topic">Partikeln</span><div class="page-link-group"><a href="#page-122" class="page-link">122</a>–<a href="#page-123" class="page-link">123</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-a2">A2</span><span class="chapter-num">51</span><span class="chapter-example">-chen, -lein, -er, -in, -ung</span><span class="chapter-topic">Aus Wörtern neue Wörter machen</span><div class="page-link-group"><a href="#page-124" class="page-link">124</a>–<a href="#page-125" class="page-link">125</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">52</span><span class="chapter-example">Nicht <em>und</em> nichts, noch nicht <em>und</em> nicht mehr</span><span class="chapter-topic">Negationswörter</span><div class="page-link-group"><a href="#page-126" class="page-link">126</a>–<a href="#page-127" class="page-link">127</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">53</span><span class="chapter-example">Ich bin oben. Komm auch nach oben.</span><span class="chapter-topic">Lokale Adverbien</span><div class="page-link-group"><a href="#page-128" class="page-link">128</a>–<a href="#page-129" class="page-link">129</a></div></li>
             </ul>
         </section>
 
         <section class="toc-section">
             <h3 class="toc-section-title">Verben 3</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">54</span><span class="chapter-example">Er kam, sah und sagte</span><span class="chapter-topic">Präteritum</span><div class="page-link-group"><a href="#page-130" class="page-link">130</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">55</span><span class="chapter-example">Ich hatte zu lange geschlafen</span><span class="chapter-topic">Plusquamperfekt</span><div class="page-link-group"><a href="#page-132" class="page-link">132</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">56</span><span class="chapter-example">Ich wasche mir die Hände</span><span class="chapter-topic">Reflexivpronomen im Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-134" class="page-link">134</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">57</span><span class="chapter-example">Kaufe ich ein oder bestelle ich Pizza?</span><span class="chapter-topic">Trennbare und untrennbare Verben</span><div class="page-link-group"><a href="#page-136" class="page-link">136</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">58</span><span class="chapter-example">Sie freut sich über die Blumen</span><span class="chapter-topic">Verben mit Präpositionen</span><div class="page-link-group"><a href="#page-138" class="page-link">138</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">59</span><span class="chapter-example">Daneben, danach, dafür ...</span><span class="chapter-topic">Präpositionaladverbien und -pronomen</span><div class="page-link-group"><a href="#page-140" class="page-link">140</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">60</span><span class="chapter-example">War, hätte, würde ...</span><span class="chapter-topic">Konjunktiv 2: Formen</span><div class="page-link-group"><a href="#page-142" class="page-link">142</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">61</span><span class="chapter-example">Wenn ich viel Geld hätte, ...</span><span class="chapter-topic">Konjunktiv 2: Gebrauch</span><div class="page-link-group"><a href="#page-144" class="page-link">144</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">62</span><span class="chapter-example">Der Baum wird gepflanzt</span><span class="chapter-topic">Passiv</span><div class="page-link-group"><a href="#page-146" class="page-link">146</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">63</span><span class="chapter-example">Wann wurde der Kölner Dom gebaut?</span><span class="chapter-topic">Passiv in der Vergangenheit</span><div class="page-link-group"><a href="#page-148" class="page-link">148</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">64</span><span class="chapter-example">Der Präsident wird Japan besuchen</span><span class="chapter-topic">Vermutung und Zukunft mit Futur 1</span><div class="page-link-group"><a href="#page-150" class="page-link">150</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">65</span><span class="chapter-example">Werden, werden, werden ...</span><span class="chapter-topic">Funktionen von <em>werden</em></span><div class="page-link-group"><a href="#page-152" class="page-link">152</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">66</span><span class="chapter-example">Leben und leben lassen</span><span class="chapter-topic">Das Verb <em>lassen</em></span><div class="page-link-group"><a href="#page-154" class="page-link">154</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">67</span><span class="chapter-example">Stehen/stellen, sitzen/setzen, liegen/legen <em>und</em> hängen</span><span class="chapter-topic">Positions- und Direktionsverben</span><div class="page-link-group"><a href="#page-156" class="page-link">156</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">54</span><span class="chapter-example">Er kam, sah und sagte</span><span class="chapter-topic">Präteritum</span><div class="page-link-group"><a href="#page-130" class="page-link">130</a>–<a href="#page-131" class="page-link">131</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">55</span><span class="chapter-example">Ich hatte zu lange geschlafen</span><span class="chapter-topic">Plusquamperfekt</span><div class="page-link-group"><a href="#page-132" class="page-link">132</a>–<a href="#page-133" class="page-link">133</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">56</span><span class="chapter-example">Ich wasche mir die Hände</span><span class="chapter-topic">Reflexivpronomen im Akkusativ und Dativ</span><div class="page-link-group"><a href="#page-134" class="page-link">134</a>–<a href="#page-135" class="page-link">135</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">57</span><span class="chapter-example">Kaufe ich ein oder bestelle ich Pizza?</span><span class="chapter-topic">Trennbare und untrennbare Verben</span><div class="page-link-group"><a href="#page-136" class="page-link">136</a>–<a href="#page-137" class="page-link">137</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">58</span><span class="chapter-example">Sie freut sich über die Blumen</span><span class="chapter-topic">Verben mit Präpositionen</span><div class="page-link-group"><a href="#page-138" class="page-link">138</a>–<a href="#page-139" class="page-link">139</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">59</span><span class="chapter-example">Daneben, danach, dafür ...</span><span class="chapter-topic">Präpositionaladverbien und -pronomen</span><div class="page-link-group"><a href="#page-140" class="page-link">140</a>–<a href="#page-141" class="page-link">141</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">60</span><span class="chapter-example">War, hätte, würde ...</span><span class="chapter-topic">Konjunktiv 2: Formen</span><div class="page-link-group"><a href="#page-142" class="page-link">142</a>–<a href="#page-143" class="page-link">143</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">61</span><span class="chapter-example">Wenn ich viel Geld hätte, ...</span><span class="chapter-topic">Konjunktiv 2: Gebrauch</span><div class="page-link-group"><a href="#page-144" class="page-link">144</a>–<a href="#page-145" class="page-link">145</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">62</span><span class="chapter-example">Der Baum wird gepflanzt</span><span class="chapter-topic">Passiv</span><div class="page-link-group"><a href="#page-146" class="page-link">146</a>–<a href="#page-147" class="page-link">147</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">63</span><span class="chapter-example">Wann wurde der Kölner Dom gebaut?</span><span class="chapter-topic">Passiv in der Vergangenheit</span><div class="page-link-group"><a href="#page-148" class="page-link">148</a>–<a href="#page-149" class="page-link">149</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">64</span><span class="chapter-example">Der Präsident wird Japan besuchen</span><span class="chapter-topic">Vermutung und Zukunft mit Futur 1</span><div class="page-link-group"><a href="#page-150" class="page-link">150</a>–<a href="#page-151" class="page-link">151</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">65</span><span class="chapter-example">Werden, werden, werden ...</span><span class="chapter-topic">Funktionen von <em>werden</em></span><div class="page-link-group"><a href="#page-152" class="page-link">152</a>–<a href="#page-153" class="page-link">153</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">66</span><span class="chapter-example">Leben und leben lassen</span><span class="chapter-topic">Das Verb <em>lassen</em></span><div class="page-link-group"><a href="#page-154" class="page-link">154</a>–<a href="#page-155" class="page-link">155</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">67</span><span class="chapter-example">Stehen/stellen, sitzen/setzen...</span><span class="chapter-topic">Positions- und Direktionsverben</span><div class="page-link-group"><a href="#page-156" class="page-link">156</a>–<a href="#page-157" class="page-link">157</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-b1">B1</span><span class="partner-title">Partnerseite 8: Passiv (Bingo)</span><div class="page-link-group"><a href="#page-158" class="page-link">158</a></div></li>
             </ul>
         </section>
@@ -633,10 +685,10 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Nomen 2</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">68</span><span class="chapter-example">Das Auto seines Vaters</span><span class="chapter-topic">Genitiv</span><div class="page-link-group"><a href="#page-160" class="page-link">160</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">69</span><span class="chapter-example">Kennen Sie den Herrn?</span><span class="chapter-topic">n-Deklination</span><div class="page-link-group"><a href="#page-162" class="page-link">162</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">70</span><span class="chapter-example">Der Jugendliche – ein Jugendlicher</span><span class="chapter-topic">Adjektive für Personen als Nomen</span><div class="page-link-group"><a href="#page-164" class="page-link">164</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">71</span><span class="chapter-example"><em>Alles Gute!</em></span><span class="chapter-topic">Adjektive als neutrale Nomen</span><div class="page-link-group"><a href="#page-166" class="page-link">166</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">68</span><span class="chapter-example">Das Auto seines Vaters</span><span class="chapter-topic">Genitiv</span><div class="page-link-group"><a href="#page-160" class="page-link">160</a>–<a href="#page-161" class="page-link">161</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">69</span><span class="chapter-example">Kennen Sie den Herrn?</span><span class="chapter-topic">n-Deklination</span><div class="page-link-group"><a href="#page-162" class="page-link">162</a>–<a href="#page-163" class="page-link">163</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">70</span><span class="chapter-example">Der Jugendliche – ein Jugendlicher</span><span class="chapter-topic">Adjektive für Personen als Nomen</span><div class="page-link-group"><a href="#page-164" class="page-link">164</a>–<a href="#page-165" class="page-link">165</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">71</span><span class="chapter-example">Alles Gute!</span><span class="chapter-topic">Adjektive als neutrale Nomen</span><div class="page-link-group"><a href="#page-166" class="page-link">166</a>–<a href="#page-167" class="page-link">167</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-b1">B1</span><span class="partner-title">Partnerseite 9: Genitiv (Würfelspiel)</span><div class="page-link-group"><a href="#page-168" class="page-link">168</a></div></li>
             </ul>
         </section>
@@ -644,16 +696,16 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Sätze und Satzverbindungen 2</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">72</span><span class="chapter-example">Wissen Sie, ob ...?</span><span class="chapter-topic">Indirekte Fragen</span><div class="page-link-group"><a href="#page-170" class="page-link">170</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">73</span><span class="chapter-example">Es ist schön, ein Fest zu feiern.</span><span class="chapter-topic">Infinitiv mit <em>zu</em></span><div class="page-link-group"><a href="#page-172" class="page-link">172</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">74</span><span class="chapter-example">Ich will singen, lass mich singen!</span><span class="chapter-topic">Infinitiv ohne <em>zu</em></span><div class="page-link-group"><a href="#page-174" class="page-link">174</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">75</span><span class="chapter-example">Das ist der Mann, der immer meine Nachbarin besucht</span><span class="chapter-topic">Relativsätze 1</span><div class="page-link-group"><a href="#page-176" class="page-link">176</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">76</span><span class="chapter-example">Wie heißt das Ding, mit dem man ...?</span><span class="chapter-topic">Relativsätze 2</span><div class="page-link-group"><a href="#page-178" class="page-link">178</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">77</span><span class="chapter-example">Ich gehe, wenn ... / Ich ging, als ...</span><span class="chapter-topic">Temporale Nebensätze mit <em>wenn</em> und <em>als</em></span><div class="page-link-group"><a href="#page-180" class="page-link">180</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">78</span><span class="chapter-example">Während, bevor, nachdem, seit</span><span class="chapter-topic">Temporale Nebensätze</span><div class="page-link-group"><a href="#page-182" class="page-link">182</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">79</span><span class="chapter-example">Um ... <em>zu und</em> damit</span><span class="chapter-topic">Finalsätze</span><div class="page-link-group"><a href="#page-184" class="page-link">184</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">80</span><span class="chapter-example">Entweder ... oder, weder ... noch, sowohl ... als auch, nicht nur ... sondern auch</span><span class="chapter-topic">Doppelkonnektoren</span><div class="page-link-group"><a href="#page-186" class="page-link">186</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">81</span><span class="chapter-example">Je größer, desto besser!</span><span class="chapter-topic">Vergleichssätze</span><div class="page-link-group"><a href="#page-188" class="page-link">188</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">72</span><span class="chapter-example">Wissen Sie, ob ...?</span><span class="chapter-topic">Indirekte Fragen</span><div class="page-link-group"><a href="#page-170" class="page-link">170</a>–<a href="#page-171" class="page-link">171</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">73</span><span class="chapter-example">Es ist schön, ein Fest zu feiern.</span><span class="chapter-topic">Infinitiv mit <em>zu</em></span><div class="page-link-group"><a href="#page-172" class="page-link">172</a>–<a href="#page-173" class="page-link">173</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">74</span><span class="chapter-example">Ich will singen, lass mich singen!</span><span class="chapter-topic">Infinitiv ohne <em>zu</em></span><div class="page-link-group"><a href="#page-174" class="page-link">174</a>–<a href="#page-175" class="page-link">175</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">75</span><span class="chapter-example">Das ist der Mann, der immer...</span><span class="chapter-topic">Relativsätze 1</span><div class="page-link-group"><a href="#page-176" class="page-link">176</a>–<a href="#page-177" class="page-link">177</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">76</span><span class="chapter-example">Wie heißt das Ding, mit dem man ...?</span><span class="chapter-topic">Relativsätze 2</span><div class="page-link-group"><a href="#page-178" class="page-link">178</a>–<a href="#page-179" class="page-link">179</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">77</span><span class="chapter-example">Ich gehe, wenn ... / Ich ging, als ...</span><span class="chapter-topic">Temporale Nebensätze mit <em>wenn</em> und <em>als</em></span><div class="page-link-group"><a href="#page-180" class="page-link">180</a>–<a href="#page-181" class="page-link">181</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">78</span><span class="chapter-example">Während, bevor, nachdem, seit</span><span class="chapter-topic">Temporale Nebensätze</span><div class="page-link-group"><a href="#page-182" class="page-link">182</a>–<a href="#page-183" class="page-link">183</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">79</span><span class="chapter-example">Um ... <em>zu</em> und <em>damit</em></span><span class="chapter-topic">Finalsätze</span><div class="page-link-group"><a href="#page-184" class="page-link">184</a>–<a href="#page-185" class="page-link">185</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">80</span><span class="chapter-example">Entweder ... oder, weder ... noch...</span><span class="chapter-topic">Doppelkonnektoren</span><div class="page-link-group"><a href="#page-186" class="page-link">186</a>–<a href="#page-187" class="page-link">187</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">81</span><span class="chapter-example">Je größer, desto besser!</span><span class="chapter-topic">Vergleichssätze</span><div class="page-link-group"><a href="#page-188" class="page-link">188</a>–<a href="#page-189" class="page-link">189</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-b1">B1</span><span class="partner-title">Partnerseite 10: Relativsätze (Familienrätsel)</span><div class="page-link-group"><a href="#page-190" class="page-link">190</a></div></li>
             </ul>
         </section>
@@ -661,16 +713,16 @@
         <section class="toc-section">
             <h3 class="toc-section-title">Präpositionen 2</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">82</span><span class="chapter-example">Während, wegen, trotz, innerhalb, außerhalb</span><span class="chapter-topic">Präpositionen mit Genitiv</span><div class="page-link-group"><a href="#page-192" class="page-link">192</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">83</span><span class="chapter-example">Innerhalb, außerhalb, in, nach, vor, seit, bei, während</span><span class="chapter-topic">Temporale Präpositionen 2</span><div class="page-link-group"><a href="#page-194" class="page-link">194</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">82</span><span class="chapter-example">Während, wegen, trotz, innerhalb...</span><span class="chapter-topic">Präpositionen mit Genitiv</span><div class="page-link-group"><a href="#page-192" class="page-link">192</a>–<a href="#page-193" class="page-link">193</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">83</span><span class="chapter-example">Innerhalb, außerhalb, in, nach...</span><span class="chapter-topic">Temporale Präpositionen 2</span><div class="page-link-group"><a href="#page-194" class="page-link">194</a>–<a href="#page-195" class="page-link">195</a></div></li>
             </ul>
         </section>
 
         <section class="toc-section">
             <h3 class="toc-section-title">Adjektive 2</h3>
             <ul class="toc-list">
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">84</span><span class="chapter-example">Deutsches Bier</span><span class="chapter-topic">Adjektivdeklination mit und ohne Artikel</span><div class="page-link-group"><a href="#page-196" class="page-link">196</a></div></li>
-                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">85</span><span class="chapter-example">Schwimmende Vögel und fliegende Fische</span><span class="chapter-topic">Partizip 1 als Adjektiv</span><div class="page-link-group"><a href="#page-198" class="page-link">198</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">84</span><span class="chapter-example">Deutsches Bier</span><span class="chapter-topic">Adjektivdeklination mit und ohne Artikel</span><div class="page-link-group"><a href="#page-196" class="page-link">196</a>–<a href="#page-197" class="page-link">197</a></div></li>
+                <li class="toc-item"><span class="level-badge badge-b1">B1</span><span class="chapter-num">85</span><span class="chapter-example">Schwimmende Vögel und fliegende Fische</span><span class="chapter-topic">Partizip 1 als Adjektiv</span><div class="page-link-group"><a href="#page-198" class="page-link">198</a>–<a href="#page-199" class="page-link">199</a></div></li>
                 <li class="toc-item partner-item"><span class="level-badge badge-b1">B1</span><span class="partner-title">Partnerseite 11: Partizip 1 (Suchspiel)</span><div class="page-link-group"><a href="#page-200" class="page-link">200</a></div></li>
             </ul>
         </section>
@@ -701,7 +753,7 @@
 </div>
 
 <script>
-    // Component database housing parsed dynamic layouts
+    // Asset storage database housing production-ready markup trees
     const pagesData = {
         "108": `
             <div class="page-render-container">
@@ -717,53 +769,74 @@
                     <div class="grid-cell grid-header grid-cell-pos0">Position 0</div>
                     <div class="grid-cell grid-header">Hauptsatz 2 (Position 1 - Position 2...)</div>
 
-                    <div class="grid-cell">Boris kommt aus Moskau,</div>
-                    <div class="grid-cell grid-cell-pos0">und</div>
-                    <div class="grid-cell">er lernt jetzt Deutsch in Berlin.</div>
-
-                    <div class="grid-cell">Er spricht gut Russisch,</div>
+                    <div class="grid-cell">Heute habe ich keine Zeit,</div>
                     <div class="grid-cell grid-cell-pos0">aber</div>
-                    <div class="grid-cell">er spricht noch nicht so gut Deutsch.</div>
+                    <div class="grid-cell">wir können morgen ins Kino gehen.</div>
 
-                    <div class="grid-cell">Lernt er heute Vokabeln,</div>
-                    <div class="grid-cell grid-cell-pos0">oder</div>
-                    <div class="grid-cell">geht er mit Freunden ins Kino?</div>
-
-                    <div class="grid-cell">Er bleibt heute zu Hause,</div>
+                    <div class="grid-cell">Ich möchte morgen ins Kino gehen,</div>
                     <div class="grid-cell grid-cell-pos0">denn</div>
-                    <div class="grid-cell">er muss für den Test lernen.</div>
+                    <div class="grid-cell">da läuft ein guter Film.</div>
+
+                    <div class="grid-cell">Ich möchte mit dir essen gehen</div>
+                    <div class="grid-cell grid-cell-pos0">und</div>
+                    <div class="grid-cell">(ich möchte mit dir) einen Film sehen.</div>
+
+                    <div class="grid-cell">Möchtest du lieber ins Kino (gehen)</div>
+                    <div class="grid-cell grid-cell-pos0">oder</div>
+                    <div class="grid-cell">(möchtest du lieber) ins Theater gehen?</div>
                 </div>
 
-                <div class="tip-box-lightbulb">
-                    <div style="font-size: 1.5rem;">💡</div>
-                    <div>
-                        <strong>Merkhilfe: ADUSO / AUDO</strong><br>
-                        Die Konjunktionen <strong>A</strong>ber, <strong>U</strong>nd, <strong>D</strong>enn, <strong>O</strong>der besetzen im Satz die <strong>Position 0</strong>. Danach folgt die ganz normale Satzstruktur.
-                    </div>
+                <p style="font-size: 0.95rem; margin: 15px 0; color: var(--text-dark);">
+                    Bei <em>und, oder</em> und <em>aber</em> kann man doppelte Satzteile weglassen:<br>
+                    <span style="font-style: italic; color: var(--text-muted);">Ich möchte mit dir essen gehen und (ich möchte mit dir) einen Film sehen.</span>
+                </p>
+
+                <div class="grid-syntax-table" style="grid-template-columns: 1fr 1.5fr 3fr; margin-top: 20px;">
+                    <div class="grid-cell" style="font-weight:bold; color:#C62828;">aber</div><div class="grid-cell" style="font-weight:500;">Kontrast</div><div class="grid-cell">Wir haben kein Auto, <strong>aber</strong> wir haben zwei Fahrräder.</div>
+                    <div class="grid-cell" style="font-weight:bold; color:#C62828;">denn</div><div class="grid-cell" style="font-weight:500;">Grund</div><div class="grid-cell">Wir haben zwei Fahrräder, <strong>denn</strong> wir fahren gerne Fahrrad.</div>
+                    <div class="grid-cell" style="font-weight:bold; color:#C62828;">und</div><div class="grid-cell" style="font-weight:500;">Addition</div><div class="grid-cell">Ich habe ein Rennrad <strong>und</strong> mein Mann hat ein Mountainbike.</div>
+                    <div class="grid-cell" style="font-weight:bold; color:#C62828;">oder</div><div class="grid-cell" style="font-weight:500;">Alternative</div><div class="grid-cell">Möchtest du mein Rennrad <strong>oder</strong> willst du dein Mountainbike?</div>
                 </div>
 
-                <div class="conceptual-matrix">
-                    <div class="matrix-card">
-                        <h4>und (Addition)</h4>
-                        <p>Verbindet zwei Sätze ohne inhaltlichen Gegensatz.</p>
-                    </div>
-                    <div class="matrix-card">
-                        <h4>aber (Kontrast)</h4>
-                        <p>Drückt eine Einschränkung oder einen Gegensatz aus.</p>
-                    </div>
-                    <div class="matrix-card">
-                        <h4>oder (Alternative)</h4>
-                        <p>Zeigt eine Wahlmöglichkeit zwischen Optionen.</p>
-                    </div>
-                    <div class="matrix-card">
-                        <h4>denn (Grund)</h4>
-                        <p>Leitet eine kausale Begründung ein.</p>
-                    </div>
+                <div class="exercise-headline"><strong>1</strong> ESSEN. Ergänzen Sie die Konjunktionen.</div>
+                <div class="options-bank-box">aber • aber • und • und • denn • oder</div>
+
+                <div class="exercise-input-line">1. Ich esse viel Gemüse, <input type="text" class="inline-blank"> ich möchte gesund leben.</div>
+                <div class="exercise-input-line">2. Ich möchte schlank sein, <input type="text" class="inline-blank"> ich habe große Lust zu essen.</div>
+                <div class="exercise-input-line">3. Ich liebe Schokolade <input type="text" class="inline-blank"> ich esse auch sehr gerne Eis.</div>
+                <div class="exercise-input-line">4. Ich mache eine Obstdiät <input type="text" class="inline-blank"> ich mache eine Eierdiät.</div>
+                <div class="exercise-input-line">5. Ich esse kein Fleisch, <input type="text" class="inline-blank"> ich esse manchmal Fisch.</div>
+                <div class="exercise-input-line">6. Essen ist wichtig für mich <input type="text" class="inline-blank"> es macht Spaß.</div>
+
+                <div class="exercise-headline"><strong>2</strong> DAS WOCHENENDE. Schreiben Sie Sätze.</div>
+                <div class="exercise-input-line">
+                    <p>1. Am Samstag geht Lisa einkaufen • und • besucht • sie • am Sonntag • ihre Freunde • .</p>
+                    <input type="text" class="full-width-blank" value="Am Samstag geht Lisa einkaufen und am Sonntag besucht sie ihre Freunde.">
+                </div>
+                <div class="exercise-input-line">
+                    <p>2. Sie geht mit ihren Freunden in den Park • sehen • sie • einen Film im Kino • oder • .</p>
+                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
+                </div>
+                <div class="exercise-input-line">
+                    <p>3. Am Samstag scheint die Sonne • am Sonntag • aber • es • regnet • .</p>
+                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
+                </div>
+                <div class="exercise-input-line">
+                    <p>4. An diesem Sonntag gehen sie ins Kino • schlecht • denn • ist • das Wetter • .</p>
+                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
+                </div>
+                <div class="exercise-input-line">
+                    <p>5. Der Film gefällt ihnen nicht, das Popcorn • gut • schmeckt • aber • .</p>
+                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
+                </div>
+                <div class="exercise-input-line">
+                    <p>6. Nach dem Kino gehen sie in einen Club, müde • noch nicht • denn • sie • sind • .</p>
+                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
                 </div>
 
                 <div class="page-navigation-footer">
                     <div></div>
-                    <a href="#page-109" class="nav-btn">Weiter zu den Übungen (S. 109) &rarr;</a>
+                    <a href="#page-109" class="nav-btn">Weiter zu Übungen S. 109 &rarr;</a>
                 </div>
             </div>
         `,
@@ -771,59 +844,130 @@
             <div class="page-render-container">
                 <div class="page-header-meta">
                     <div class="page-title-main"><span>A1 | 44</span> Übungen (S. 109)</div>
-                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Lektion 44</div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Übungsbuch</div>
                 </div>
 
-                <div class="exercise-headline">
-                    <span class="exercise-num-badge">1</span> Was passt? Wählen Sie die richtige Konjunktion aus.
+                <div class="exercise-headline"><strong>3</strong> STÄDTE IN DEUTSCHLAND. Ergänzen Sie die Konjunktionen.</div>
+                <div class="options-bank-box">aber • und • denn • oder • denn • und</div>
+                
+                <div class="exercise-input-line">1. Frankfurt ist nicht so groß wie Berlin, <input type="text" class="inline-blank"> Frankfurt hat einen größeren Flughafen.</div>
+                <div class="exercise-input-line">2. Berlin hat die meisten Museen <input type="text" class="inline-blank"> die meisten Theater.</div>
+                <div class="exercise-input-line">3. Viele Leute wollen in Berlin arbeiten <input type="text" class="inline-blank"> viele Touristen kommen nach Berlin.</div>
+                <div class="exercise-input-line">4. Viele Leute kommen nach Berlin, <input type="text" class="inline-blank"> Berlin ist die Hauptstadt von Deutschland.</div>
+                <div class="exercise-input-line">5. Morgens um 5 Uhr können Sie in Hamburg noch auf die Reeperbahn gehen <input type="text" class="inline-blank"> Sie besuchen den Fischmarkt.</div>
+                <div class="exercise-input-line">6. Ich wohne gerne in München, <input type="text" class="inline-blank"> dort kann ich im Winter in die Alpen zum Skifahren.</div>
+
+                <div class="exercise-headline"><strong>4</strong> Verbinden Sie die Sätze mit <em>und</em>. Was kann man weglassen?</div>
+                <div class="exercise-sub-instruction">(Manchmal kann man nichts weglassen!)</div>
+                
+                <div class="flex-exercise-row">
+                    <div class="flex-exercise-main">
+                        <div class="exercise-input-line">
+                            <p>1. Ich gehe gerne ins Kino. Ich gehe gerne ins Theater.</p>
+                            <input type="text" class="full-width-blank" value="Ich gehe gerne ins Kino und (ich gehe gerne) ins Theater.">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>2. Er kauft ein neues Handy. Er kauft einen neuen Laptop.</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>3. Sie geht heute schwimmen. Sie spielt heute Tennis.</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>4. Mein Bruder mag gerne Jazzmusik. Ich mag gerne klassische Musik.</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>5. Wir wollen zusammen für die Prüfung lernen. Wir wollen zusammen in Urlaub fahren.</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                    </div>
+                    <div class="example-hint-tag">
+                        <strong>Beispiel 1:</strong><br> Ich gehe gerne ins Kino und (ich gehe gerne) ins Theater.
+                    </div>
                 </div>
 
-                <div class="exercise-input-line">
-                    1. Michael mag Fußball, <input type="text" class="inline-blank" placeholder="aber / denn"> er spielt nicht selbst im Verein.
-                </div>
-                <div class="exercise-input-line">
-                    2. Gehst du heute zum Supermarkt, <input type="text" class="inline-blank" placeholder="oder / und"> kaufst du erst morgen ein?
-                </div>
-                <div class="exercise-input-line">
-                    3. Wir gehen heute im Park spazieren, <input type="text" class="inline-blank" placeholder="denn / aber"> das Wetter ist wunderschön.
-                </div>
-                <div class="exercise-input-line">
-                    4. Anna packt ihren Koffer <input type="text" class="inline-blank" placeholder="und / oder"> fährt sofort zum Flughafen.
+                <div class="exercise-headline"><strong>5</strong> Verbinden Sie die Fragen mit <em>oder</em>. Was kann man weglassen?</div>
+                <div class="exercise-sub-instruction">(Manchmal kann man nichts weglassen!)</div>
+
+                <div class="flex-exercise-row">
+                    <div class="flex-exercise-main">
+                        <div class="exercise-input-line">
+                            <p>1. Gehen Sie am Samstagabend ins Kino? Gehen Sie am Samstagabend ins Theater?</p>
+                            <input type="text" class="full-width-blank" value="Gehen Sie am Samstagabend ins Kino oder (gehen Sie am Samstagabend) ins Theater?">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>2. Essen Sie gerne Schokolade? Essen Sie lieber Pizza?</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>3. Möchten Sie einen Kaffee? Möchten Sie einen Tee?</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>4. Möchten Sie den Kaffee mit Zucker? Möchten Sie den Kaffee ohne Zucker?</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>5. Soll ich das Fenster aufmachen? Ist es Ihnen zu kalt?</p>
+                            <input type="text" class="full-width-blank" placeholder="Antwort schreiben...">
+                        </div>
+                    </div>
+                    <div class="example-hint-tag">
+                        <strong>Beispiel 1:</strong><br> Gehen Sie am Samstagabend ins Kino oder (gehen Sie am Samstagabend) ins Theater?
+                    </div>
                 </div>
 
-                <div class="exercise-headline">
-                    <span class="exercise-num-badge">2</span> Sätze verbinden. Achten Sie auf die Position 0!
-                </div>
-
-                <div class="exercise-input-line">
-                    <p><strong>1. Wir können ins Restaurant gehen. Wir können zu Hause Pizza bestellen. (oder)</strong></p>
-                    <input type="text" class="full-width-blank" value="Wir können ins Restaurant gehen, oder wir können zu Hause Pizza bestellen.">
-                </div>
-
-                <div class="exercise-input-line" style="margin-top: 15px;">
-                    <p><strong>2. Er hat keinen Hunger. Er hat den ganzen Tag nichts gegessen. (aber)</strong></p>
-                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
-                </div>
-
-                <div class="exercise-input-line" style="margin-top: 15px;">
-                    <p><strong>3. Sie geht früh schlafen. Sie muss morgen um fünf Uhr aufstehen. (denn)</strong></p>
-                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
-                </div>
-
-                <div class="exercise-input-line" style="margin-top: 15px;">
-                    <p><strong>4. Ich trinke einen Tee. Mein Bruder trinkt einen kalten Apfelsaft. (und)</strong></p>
-                    <input type="text" class="full-width-blank" placeholder="Schreiben Sie den Satz...">
+                <div class="exercise-headline"><strong>6</strong> SHOPPING. Schreiben Sie den Text neu. Verbinden Sie die Sätze mit <em>denn, und, oder, aber</em>.</div>
+                
+                <div class="flex-exercise-row">
+                    <div class="flex-exercise-main">
+                        <div class="exercise-input-line">
+                            <p>1. Ich gehe in die Stadt. Ich möchte einkaufen.</p>
+                            <input type="text" class="full-width-blank" placeholder="Satz verbinden...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>2. Ich möchte eine Hose kaufen. Ich möchte eine Bluse kaufen.</p>
+                            <input type="text" class="full-width-blank" placeholder="Satz verbinden...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>3. Die rote Bluse ist sehr schön. Sie ist zu teuer.</p>
+                            <input type="text" class="full-width-blank" placeholder="Satz verbinden...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>4. Soll ich die blaue nehmen? Soll ich die grüne nehmen?</p>
+                            <input type="text" class="full-width-blank" placeholder="Satz verbinden...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>5. Mir gefällt die blaue. Mir gefällt die grüne.</p>
+                            <input type="text" class="full-width-blank" placeholder="Satz verbinden...">
+                        </div>
+                        <div class="exercise-input-line">
+                            <p>6. Leider kann ich nur eine Bluse kaufen. Ich habe nicht so viel Geld dabei.</p>
+                            <input type="text" class="full-width-blank" placeholder="Satz verbinden...">
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box-lightbulb">
+                        <div style="font-size: 1.5rem;">💡</div>
+                        <div>
+                            <strong>Immer Position 0</strong><br>
+                            aber – und – denn – oder<br>
+                            <strong>&rarr; AUDO</strong>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="page-navigation-footer">
-                    <a href="#page-108" class="nav-btn">&larr; Zurück zur Erklärung (S. 108)</a>
+                    <a href="#page-108" class="nav-btn">&larr; Zurück zur Erklärung S. 108</a>
                     <div></div>
                 </div>
             </div>
         `
     };
 
-    // Progressive asset loader mechanism triggered by global navigation hash change
+    // Client router logic mapping URL state hashes to page templates
     window.addEventListener('hashchange', () => {
         const hash = window.location.hash;
         const workspace = document.getElementById('content-display');
@@ -837,8 +981,8 @@
                 workspace.innerHTML = `
                     <div class="placeholder-box">
                         <h3>Seite ${pageNum}</h3>
-                        <p style="color: var(--brand-orange); font-weight: bold;">Inhalt bereit zur Bereitstellung</p>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">Die Datenstruktur für diese Seite wird integriert, sobald Sie mir den zugehörigen Buchinhalt senden.</p>
+                        <p style="color: var(--brand-orange); font-weight: bold;">Strukturelles Modul bereit</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Der Daten-Spread für diese Seite ist im Router registriert. Reichen Sie die Grafik-Scans ein, um die Live-DOM-Inhalte einzuhängen.</p>
                     </div>
                 `;
             }
