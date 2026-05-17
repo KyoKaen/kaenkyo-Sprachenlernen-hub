@@ -9,12 +9,42 @@ const workspace = document.getElementById('content-display');
  */
 
 const pageToChapterMap = {
-    // Chapter 25 Map
+    // ==========================================
+    // ABSCHNITT: VERBEN 2 (SEITE 64 - 78)
+    // ==========================================
+    
+    // 25 Ich war, ich hatte (Präteritum: sein und haben)
     "64": "chapter25",
     "65": "chapter25",
-   // Chapter 26 Map
+
+    // 26 Was hast du gestern gemacht? (Perfekt mit haben)
     "66": "chapter26",
     "67": "chapter26",
+
+    // 27 Ich bin gekommen, ich habe gelacht (Perfekt mit sein)
+    "68": "chapter27",
+    "69": "chapter27",
+
+    // 28 Gesehen – eingekauft – bezahlt (Partizip Perfekt (Partizip 2))
+    "70": "chapter28",
+    "71": "chapter28",
+
+    // 29 Ich konnte, ich musste, ich wollte (Präteritum: Modalverben)
+    "72": "chapter29",
+    "73": "chapter29",
+
+    // 30 Gestern hatte er Zeit und hat Sport gemacht (Zeitengebrauch)
+    "74": "chapter30",
+    "75": "chapter30",
+
+    // 31 Sie wäscht sich (Reflexive (und reziproke) Verben)
+    "76": "chapter31",
+    "77": "chapter31",
+
+    // Partnerseite 4: Perfekt (Würfelspiel)
+    "78": "partnerseite4_perfekt",
+
+    
     // Chapter 44 Map
     "108": "chapter44",
     "109": "chapter44"
