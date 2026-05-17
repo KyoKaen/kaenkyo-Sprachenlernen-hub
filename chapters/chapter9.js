@@ -1,185 +1,167 @@
-const chapter9 = {
-  title: "9 Helfen Sie mir! (Imperativ)",
-  level: "A1",
-  pages: [26, 27],
-  
-  // Explanation / Reference Section from Page 26
-  explanation: {
-    grammarFocus: "Imperativ",
-    formationRule: {
-      formell: "Infinitiv + Sie (z.B. kommen Sie)",
-      informellSingular: "Stamm des Verbs ohne -en (du-Form ohne -st, kein Subjekt)",
-      informellPlural: "ihr-Form des Verbs (kein Subjekt)"
-    },
-    notes: [
-      "Der Imperativ mit du und ihr hat kein Subjekt.",
-      "Einen Imperativ kann man mit 'bitte' höflicher machen.",
-      "Im Imperativ sagen wir oft 'mal' und 'doch'."
-    ]
-  },
+// chapters/chapter9.js
 
-  // Structured exercises 1 through 5 matching pages 26-27 layout
-  exercises: [
-    {
-      id: "9_1",
-      instruction: "Schreiben Sie Imperativformen mit Sie, du und ihr.",
-      type: "sentence-formation",
-      tasks: [
-        {
-          id: "9_1_1",
-          verbs: ["gehen", "kaufen", "singen"],
-          exampleAnswers: [
-            "Gehen Sie! Geh! Geht!",
-            "Kaufen Sie! Kauf! Kauft!",
-            "Singen Sie! Sing! Singt!"
-          ]
-        },
-        {
-          id: "9_1_2",
-          verbs: ["schreiben", "spielen", "fragen"],
-          answers: [
-            "Schreiben Sie! Schreib! Schreibt!",
-            "Spielen Sie! Spiel! Spielt!",
-            "Fragen Sie! Frag! Fragt!"
-          ]
-        },
-        {
-          id: "9_1_3",
-          verbs: ["mitkommen", "weggehen", "mitbringen", "abholen"],
-          answers: [
-            "Kommen Sie mit! Komm mit! Kommt mit!",
-            "Gehen Sie weg! Geh weg! Geht weg!",
-            "Bringen Sie mit! Bring mit! Bringt mit!",
-            "Holen Sie ab! Hol ab! Holt ab!"
-          ]
-        },
-        {
-          id: "9_1_4",
-          verbs: ["geben", "nehmen", "essen", "lesen", "sprechen"],
-          answers: [
-            "Geben Sie! Gib! Gebt!",
-            "Nehmen Sie! Nimm! Nehmt!",
-            "Essen Sie! Iss! Esst!",
-            "Lesen Sie! Lies! Lest!",
-            "Sprechen Sie! Sprich! Sprecht!"
-          ]
-        },
-        {
-          id: "9_1_5",
-          verbs: ["sein", "haben", "fahren", "waschen"],
-          answers: [
-            "Seien Sie! Sei! Seid!",
-            "Haben Sie! Hab! Habt!",
-            "Fahren Sie! Fahr! Fahrt!",
-            "Waschen Sie! Wasch! Wascht!"
-          ]
-        }
-      ]
-    },
-    {
-      id: "9_2",
-      instruction: "IM KURS. Wer sagt was? Schreiben Sie Sätze im Imperativ formell.",
-      type: "categorization-sentences",
-      wordPool: [
-        "wiederholen", "langsam sprechen", "zu zweit sprechen", "den Text lesen",
-        "in der Gruppe diskutieren", "den Dialog spielen", "das Wort erklären",
-        "ein Beispiel geben", "an die Tafel schreiben"
-      ],
-      tasks: [
-        {
-          id: "9_2_1",
-          speaker: "Kursleiter/-innen",
-          exampleAnswer: "Bitte sprechen Sie zu zweit.",
-          answers: [
-            "Wiederholen Sie bitte.",
-            "Lesen Sie den Text.",
-            "Diskutieren Sie in der Gruppe.",
-            "Erklären Sie das Wort.",
-            "Geben Sie ein Beispiel.",
-            "Schreiben Sie an die Tafel."
-          ]
-        },
-        {
-          id: "9_2_2",
-          speaker: "Teilnehmer/-innen",
-          answers: [
-            "Sprechen Sie bitte langsam.",
-            "Spielen Sie den Dialog."
-          ]
-        }
-      ]
-    },
-    {
-      id: "9_3",
-      instruction: "Wer ist gemeint? Welche Personen passen? Kreuzen Sie an.",
-      type: "matrix-selection",
-      columns: ["Herr Müller", "Herr und Frau Müller", "Mona und Lucas", "Mona"],
-      tasks: [
-        { id: "9_3_1", sentence: "Kommt bitte schnell.", correctColumn: "Mona und Lucas" },
-        { id: "9_3_2", sentence: "Nehmen Sie bitte Platz.", correctColumn: "Herr und Frau Müller" },
-        { id: "9_3_3", sentence: "Esst doch noch etwas.", correctColumn: "Mona und Lucas" },
-        { id: "9_3_4", sentence: "Gib mir mal den Teller.", correctColumn: "Mona" },
-        { id: "9_3_5", sentence: "Hab doch keine Angst.", correctColumn: "Mona" },
-        { id: "9_3_6", sentence: "Lassen Sie sich Zeit.", correctColumn: "Herr Müller" },
-        { id: "9_3_7", sentence: "Guck doch mal.", correctColumn: "Mona" }
-      ]
-    },
-    {
-      id: "9_4",
-      instruction: "RATSCHLÄGE GEBEN. Schreiben Sie Sätze im Imperativ.",
-      type: "input-transformation",
-      wordPool: [
-        "eine Kopfschmerztablette nehmen", "einen Tee trinken", "eine Brille kaufen",
-        "Yoga machen", "weniger essen", "mehr essen", "weniger arbeiten",
-        "am Abend spazieren gehen", "nach Hause gehen"
-      ],
-      tasks: [
-        { 
-          id: "9_4_1", 
-          context: "Es geht mir nicht gut.", 
-          exampleAnswers: ["Dann geh doch nach Hause.", "Dann gehen Sie doch nach Hause."] 
-        },
-        { id: "9_4_2", context: "Ich habe Kopfschmerzen.", answers: ["Nimm eine Kopfschmerztablette.", "Nehmen Sie eine Kopfschmerztablette."] },
-        { id: "9_4_3", context: "Ich bin gestresst.", answers: ["Mach Yoga.", "Machen Sie Yoga.", "Arbeite weniger.", "Arbeiten Sie weniger."] },
-        { id: "9_4_4", context: "Ich kann nicht schlafen.", answers: ["Trink einen Tee.", "Trinken Sie einen Tee.", "Geh am Abend spazieren.", "Gehen Sie am Abend spazieren."] },
-        { id: "9_4_5", context: "Ich bin nervös.", answers: ["Mach Yoga.", "Machen Sie Yoga."] },
-        { id: "9_4_6", context: "Mein Bauch tut weh.", answers: ["Trink einen Tee.", "Trinken Sie einen Tee.", "Iss weniger.", "Essen Sie weniger."] },
-        { id: "9_4_7", context: "Ich habe immer Hunger.", answers: ["Iss mehr.", "Essen Sie mehr."] },
-        { id: "9_4_8", context: "Ich sehe schlecht.", answers: ["Kauf eine Brille.", "Kaufen Sie eine Brille."] },
-        { id: "9_4_9", context: "Ich möchte abnehmen.", answers: ["Iss weniger.", "Essen Sie weniger.", "Mach Yoga.", "Machen Sie Yoga."] }
-      ]
-    },
-    {
-      id: "9_5a",
-      instruction: "WÖRTER LERNEN MIT EINER APP. Schreiben Sie Sätze im Imperativ formell Singular.",
-      type: "formell-singular-input",
-      tasks: [
-        { id: "9_5a_1", base: "eine App suchen", exampleAnswer: "Suchen Sie eine App." },
-        { id: "9_5a_2", base: "die App herunterladen", answer: "Laden Sie die App herunter." },
-        { id: "9_5a_3", base: "die App installieren", answer: "Installieren Sie die App." },
-        { id: "9_5a_4", base: "Beispielsätze mit Lücke schreiben", answer: "Schreiben Sie Beispielsätze mit Lücke." },
-        { id: "9_5a_5", base: "die Lösung ergänzen", answer: "Ergänzen Sie die Lösung." },
-        { id: "9_5a_6", base: "das Wörterlernen starten", answer: "Starten Sie das Wörterlernen." },
-        { id: "9_5a_7", base: "den Lückensatz laut lesen und ergänzen", answer: "Lesen Sie den Lückensatz laut und ergänzen Sie." },
-        { id: "9_5a_8", base: "klicken und kontrollieren", answer: "Klicken Sie und kontrollieren Sie." }
-      ]
-    },
-    {
-      id: "9_5b",
-      instruction: "Erklären Sie einem Freund / einer Freundin, wie er/sie gut Wörter lernen kann.",
-      type: "informell-singular-input",
-      tasks: [
-        { id: "9_5b_1", base: "eine App suchen", exampleAnswer: "Such eine App." },
-        { id: "9_5b_2", base: "die App herunterladen", answer: "Lad die App herunter." },
-        { id: "9_5b_3", base: "die App installieren", answer: "Installiere die App." },
-        { id: "9_5b_4", base: "Beispielsätze mit Lücke schreiben", answer: "Schreib Beispielsätze mit Lücke." },
-        { id: "9_5b_5", base: "die Lösung ergänzen", answer: "Ergänze die Lösung." },
-        { id: "9_5b_6", base: "das Wörterlernen starten", answer: "Starte das Wörterlernen." },
-        { id: "9_5b_7", base: "den Lückensatz laut lesen und ergänzen", answer: "Lies den Lückensatz laut und ergänze." },
-        { id: "9_5b_8", base: "klicken und kontrollieren", answer: "Klick und kontrollier." }
-      ]
+export const chapter9 = {
+    title: "Helfen Sie mir! (Imperativ)",
+    level: "A1",
+    pages: {
+        "26": `
+            <div class="page-render-container">
+                <div class="page-header-meta">
+                    <div class="page-title-main"><span>A1 | 9</span> Helfen Sie mir! <em>(Imperativ)</em></div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--brand-plum);">Erklärung & Übung (S. 26)</div>
+                </div>
+
+                <div class="grid-syntax-table" style="grid-template-columns: 1.5fr 1.2fr 1.5fr 1.5fr 1.2fr; margin-bottom: 20px;">
+                    <div class="grid-cell grid-header"></div>
+                    <div class="grid-cell grid-header" style="background:#FFE0B2; color:#E65100;">formell</div>
+                    <div class="grid-cell grid-header" style="background:#FFE0B2; color:#E65100;">informell Singular</div>
+                    <div class="grid-cell grid-header" style="background:#FFE0B2; color:#E65100;">informell Plural</div>
+                    <div class="grid-cell grid-header" style="background:#B3E5FC; color:#01579B;">Infinitiv</div>
+
+                    <div class="grid-cell" style="font-weight:bold;">normale Verben</div>
+                    <div class="grid-cell">kommen Sie</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">komm</div>
+                    <div class="grid-cell">kommt</div>
+                    <div class="grid-cell">kommen</div>
+
+                    <div class="grid-cell" style="font-weight:bold;">unregelmäßige Verben e &rarr; i</div>
+                    <div class="grid-cell">nehmen Sie</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">nimm</div>
+                    <div class="grid-cell">nehmt</div>
+                    <div class="grid-cell">nehmen</div>
+
+                    <div class="grid-cell" style="font-weight:bold;">unregelmäßige Verben a &rarr; ä</div>
+                    <div class="grid-cell">fahren Sie</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">fahr</div>
+                    <div class="grid-cell">fahrt</div>
+                    <div class="grid-cell">fahren</div>
+
+                    <div class="grid-cell" style="font-weight:bold;">trennbare Verben</div>
+                    <div class="grid-cell">bringen Sie ... mit</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">bring ... mit</div>
+                    <div class="grid-cell">bringt ... mit</div>
+                    <div class="grid-cell">mitbringen</div>
+
+                    <div class="grid-cell" style="font-weight:bold; color:var(--brand-plum);">sein</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">seien Sie</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">sei</div>
+                    <div class="grid-cell">seid</div>
+                    <div class="grid-cell">sein</div>
+
+                    <div class="grid-cell" style="font-weight:bold; color:var(--brand-plum);">haben</div>
+                    <div class="grid-cell">haben Sie</div>
+                    <div class="grid-cell" style="color:#C62828; font-weight:bold;">hab</div>
+                    <div class="grid-cell">habt</div>
+                    <div class="grid-cell">haben</div>
+                </div>
+
+                <div class="tip-box-lightbulb" style="background-color: #E8F5E9; margin-bottom: 20px;">
+                    <strong>Grammatik-Hinweise:</strong><br>
+                    • Der Imperativ mit <em>du</em> und <em>ihr</em> hat <strong>kein Subjekt</strong>.<br>
+                    • Einen Imperativ kann man mit <strong>bitte</strong> höflicher machen: <em>Bitte helfen Sie mir! / Helfen Sie mir bitte!</em><br>
+                    • Im Imperativ sagen wir oft <strong>mal</strong> und <strong>doch</strong>: <em>Hilf mir doch! / Hilf mir mal! / Hilf mir doch mal!</em>
+                </div>
+
+                <div class="exercise-headline"><strong>1</strong> Schreibübungen. Schreiben Sie Imperativformen mit <em>Sie</em>, <em>du</em> und <em>ihr</em>.</div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 1.8; margin-bottom: 20px;">
+                    <div style="color: var(--text-muted); font-style: italic; margin-bottom: 10px;">
+                        Ex 1: gehen • kaufen • singen &rarr; <strong>Gehen Sie! Geh! Geht! / Kaufen Sie! Kauf! Kauft! / Singen Sie! Sing! Singt!</strong>
+                    </div>
+                    <div class="exercise-input-line">
+                        2. schreiben • spielen • fragen &rarr; <input type="text" class="full-width-blank" value="Schreiben Sie! Schreib! Schreibt! / Spielen Sie! Spiel! Spielt! / Fragen Sie! Frag! Fragt!">
+                    </div>
+                    <div class="exercise-input-line">
+                        3. mitkommen • weggehen • mitbringen • abholen &rarr; <input type="text" class="full-width-blank" placeholder="Kommen Sie mit! Komm mit! Kommt mit! / ...">
+                    </div>
+                    <div class="exercise-input-line">
+                        4. geben • nehmen • essen • lesen • sprechen &rarr; <input type="text" class="full-width-blank" placeholder="Geben Sie! Gib! Gebt! / ...">
+                    </div>
+                    <div class="exercise-input-line">
+                        5. sein • haben • fahren • waschen &rarr; <input type="text" class="full-width-blank" placeholder="Seien Sie! Sei! Seid! / ...">
+                    </div>
+                </div>
+
+                <div class="page-navigation-footer" style="margin-top:20px;">
+                    <div></div>
+                    <a href="#page-27" class="nav-btn">Weiter zu Übungen S. 27 &rarr;</a>
+                </div>
+            </div>
+        `,
+        "27": `
+            <div class="page-render-container">
+                <div class="page-header-meta">
+                    <div class="page-title-main"><span>A1 | 9</span> Übungen (S. 27)</div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Anwendung</div>
+                </div>
+
+                <div class="exercise-headline"><strong>2</strong> IM KURS. Wer sagt was? Schreiben Sie Sätze im Imperativ formell.</div>
+                <div class="options-bank-box" style="font-size:0.85rem; margin-bottom:10px;">
+                    wiederholen • langsam sprechen • zu zweit sprechen • den Text lesen • in der Gruppe diskutieren • den Dialog spielen • das Wort erklären • ein Beispiel geben • an die Tafel schreiben
+                </div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 1.8; margin-bottom: 20px;">
+                    <strong>Kursleiter/-innen:</strong> <span style="color:var(--text-muted); font-style:italic;">Bitte sprechen Sie zu zweit.</span><br>
+                    <div class="exercise-input-line"><input type="text" class="full-width-blank" placeholder="Schreiben Sie Sätze für Kursleiter (z.B. Wiederholen Sie bitte. / Lesen Sie...)"></div>
+                    <br>
+                    <strong>Teilnehmer/-innen:</strong><br>
+                    <div class="exercise-input-line"><input type="text" class="full-width-blank" placeholder="Schreiben Sie Sätze für Teilnehmer (z.B. Sprechen Sie bitte langsam. / Spielen Sie...)"></div>
+                </div>
+
+                <div class="exercise-headline"><strong>3</strong> Wer ist gemeint? Welche Personen passen?</div>
+                <div style="background:#fff; border:1px solid #ddd; padding:15px; border-radius:6px; margin-bottom:20px;">
+                    <div class="exercise-input-line">1. Kommt bitte schnell. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3" selected>Mona und Lucas</option><option value="4">Mona</option></select></div>
+                    <div class="exercise-input-line">2. Nehmen Sie bitte Platz. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3">Mona und Lucas</option><option value="4">Mona</option></select></div>
+                    <div class="exercise-input-line">3. Esst doch noch etwas. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3">Mona und Lucas</option><option value="4">Mona</option></select></div>
+                    <div class="exercise-input-line">4. Gib mir mal den Teller. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3">Mona und Lucas</option><option value="4">Mona</option></select></div>
+                    <div class="exercise-input-line">5. Hab doch keine Angst. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3">Mona und Lucas</option><option value="4">Mona</option></select></div>
+                    <div class="exercise-input-line">6. Lassen Sie sich Zeit. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3">Mona und Lucas</option><option value="4">Mona</option></select></div>
+                    <div class="exercise-input-line">7. Guck doch mal. &rarr; <select class="inline-blank"><option value="">-- Passende Person wählen --</option><option value="1">Herr Müller</option><option value="2">Herr und Frau Müller</option><option value="3">Mona und Lucas</option><option value="4">Mona</option></select></div>
+                </div>
+
+                <div class="exercise-headline"><strong>4</strong> RATSCHLÄGE GEBEN. Schreiben Sie Sätze im Imperativ.</div>
+                <div class="options-bank-box" style="font-size:0.85rem; margin-bottom:10px;">
+                    eine Kopfschmerztablette nehmen • einen Tee trinken • eine Brille kaufen • Yoga machen • weniger essen • mehr essen • weniger arbeiten • am Abend spazieren gehen • <span style="text-decoration:line-through; color:#aaa;">nach Hause gehen</span>
+                </div>
+                <div style="background:#fff; border:1px solid #ddd; padding:15px; border-radius:6px; margin-bottom:20px;">
+                    <div class="exercise-input-line">1. Es geht mir nicht gut. &rarr; <span style="color:var(--text-muted); font-style:italic;">Dann geh doch nach Hause. / Dann gehen Sie doch nach Hause.</span></div>
+                    <div class="exercise-input-line">2. Ich habe Kopfschmerzen. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">3. Ich bin gestresst. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">4. Ich kann nicht schlafen. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">5. Ich bin nervös. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">6. Mein Bauch tut weh. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">7. Ich habe immer Hunger. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">8. Ich sehe schlecht. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                    <div class="exercise-input-line">9. Ich möchte abnehmen. &rarr; <input type="text" class="full-width-blank" placeholder="Ratschlag schreiben..."></div>
+                </div>
+
+                <div class="exercise-headline"><strong>5 a)</strong> WÖRTER LERNEN MIT EINER APP. Schreiben Sie Sätze im Imperativ formell Singular.</div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 1.8; margin-bottom: 20px;">
+                    <div class="exercise-input-line">1. eine App suchen &rarr; <input type="text" class="full-width-blank" value="Suchen Sie eine App."></div>
+                    <div class="exercise-input-line">2. die App herunterladen &rarr; <input type="text" class="full-width-blank" placeholder="Laden Sie..."></div>
+                    <div class="exercise-input-line">3. die App installieren &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">4. Beispielsätze mit Lücke schreiben &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">5. die Lösung ergänzen &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">6. das Wörterlernen starten &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">7. den Lückensatz laut lesen und ergänzen &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">8. klicken und kontrollieren &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                </div>
+
+                <div class="exercise-headline"><strong>5 b)</strong> Erklären Sie einem Freund / einer Freundin, wie er/sie gut Wörter lernen kann (informell Singular).</div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 1.8; margin-bottom: 20px;">
+                    <div class="exercise-input-line">1. eine App suchen &rarr; <input type="text" class="full-width-blank" value="Such eine App."></div>
+                    <div class="exercise-input-line">2. die App herunterladen &rarr; <input type="text" class="full-width-blank" placeholder="Lad die App herunter."></div>
+                    <div class="exercise-input-line">3. die App installieren &rarr; <input type="text" class="full-width-blank" placeholder="Installiere..."></div>
+                    <div class="exercise-input-line">4. Beispielsätze mit Lücke schreiben &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">5. die Lösung ergänzen &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">6. das Wörterlernen starten &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">7. den Lückensatz laut lesen und ergänzen &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                    <div class="exercise-input-line">8. klicken und kontrollieren &rarr; <input type="text" class="full-width-blank" placeholder="Antwort..."></div>
+                </div>
+
+                <div class="page-navigation-footer">
+                    <a href="#page-26" class="nav-btn">&larr; Zurück zur Erklärung S. 26</a>
+                    <div></div>
+                </div>
+            </div>
+        `
     }
-  ]
 };
-
-export default chapter9;
