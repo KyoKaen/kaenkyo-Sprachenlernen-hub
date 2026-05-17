@@ -508,3 +508,50 @@ body {
 .nav-btn:hover {
     background-color: var(--brand-orange);
 }
+
+/* Smoothly glides the view when navigating back up */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Floating Action Button Setup */
+.macro-toc-trigger {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /* Using generic defaults fallback; replace with your exact CSS variables if needed */
+    background-color: var(--brand-plum, #6b21a8); 
+    color: #ffffff;
+    
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    
+    /* Forces the button to sit reliably above input fields and absolute layout tables */
+    z-index: 9999; 
+    
+    /* Smooth transition configuration for modern interactions */
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease;
+}
+
+/* Interactive States */
+.macro-toc-trigger:hover {
+    background-color: var(--exercise-blue, #1d4ed8);
+    transform: translateY(-2px);
+}
+
+.macro-toc-trigger:active {
+    transform: translateY(0);
+}
+
+/* Defensive layout protection: prevents text from getting stuck behind the button */
+.page-render-container {
+    padding-bottom: 80px !important;
+}
