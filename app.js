@@ -12,7 +12,9 @@ const pageToChapterMap = {
     // Chapter 25 Map
     "64": "chapter25",
     "65": "chapter25",
-
+   // Chapter 26 Map
+    "66": "chapter26",
+    "67": "chapter26",
     // Chapter 44 Map
     "108": "chapter44",
     "109": "chapter44"
