@@ -44,6 +44,44 @@ const pageToChapterMap = {
     // Partnerseite 4: Perfekt (Würfelspiel)
     "78": "partnerseite4_perfekt",
 
+    // ==========================================
+    // ABSCHNITT: PRÄPOSITIONEN 1 (SEITE 80 - 96)
+    // ==========================================
+    
+    // 32 Im, am, um, von ... bis, nach, vor (Temporale Präpositionen)
+    "80": "chapter32",
+    "81": "chapter32",
+
+    // 33 Aus, bei, mit, nach, seit, von, zu (Präpositionen mit Dativ)
+    "82": "chapter33",
+    "83": "chapter33",
+
+    // 34 Für, um, durch, ohne, gegen (Präpositionen mit Akkusativ)
+    "84": "chapter34",
+    "85": "chapter34",
+
+    // 35 Wo? Im Kino (Wechselpräpositionen mit Dativ)
+    "86": "chapter35",
+    "87": "chapter35",
+
+    // 36 Im Kino oder ins Kino? (Wechselpräpositionen mit Dativ und Akkusativ)
+    "88": "chapter36",
+    "89": "chapter36",
+
+    // 37 Ich gehe zum Arzt und auf den Markt (Lokale Präpositionen: Wohin?)
+    "90": "chapter37",
+    "91": "chapter37",
+
+    // 38 Ich war beim Arzt und bin jetzt auf dem Markt (Lokale Präpositionen: Wo?)
+    "92": "chapter38",
+    "93": "chapter38",
+
+    // 39 Ich komme aus den Bergen vom Skifahren (Lokale Präpositionen: Woher?)
+    "94": "chapter39",
+    "95": "chapter39",
+
+    // Partnerseite 5: Wechselpräpositionen (Malspiel)
+    "96": "partnerseite5_wechselpraepositionen",
     
     // Chapter 44 Map
     "108": "chapter44",
