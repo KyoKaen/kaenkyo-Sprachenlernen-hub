@@ -10,6 +10,127 @@ const workspace = document.getElementById('content-display');
 
 const pageToChapterMap = {
     // ==========================================
+    // ABSCHNITT: VERBEN 1 (SEITE 10 - 29)
+    // ==========================================
+    
+    // 1 Ich, du, er, sie, es, wir, ihr, sie und Sie (Personalpronomen)
+    "10": "chapter1",
+    "11": "chapter1",
+
+    // 2 Ich komme, du kommst (Konjugation Präsens)
+    "12": "chapter2",
+    "13": "chapter2",
+
+    // 3 Ich bin, du hast, er möchte (Sein, haben und besondere Verben)
+    "14": "chapter3",
+    "15": "chapter3",
+
+    // 4 Ich esse wenig, aber du isst viel! (Verben mit Vokalwechsel)
+    "16": "chapter4",
+    "17": "chapter4",
+
+    // 5 Ich muss, ich kann, ich will (Modalverben: Konjugation und Position im Satz)
+    "18": "chapter5",
+    "19": "chapter5",
+
+    // 6 Ich kann, ich will, ich möchte (Modalverben: Gebrauch 1)
+    "20": "chapter6",
+    "21": "chapter6",
+
+    // 7 Ich muss, ich soll, ich darf (Modalverben: Gebrauch 2)
+    "22": "chapter7",
+    "23": "chapter7",
+
+    // 8 Ich kaufe im Supermarkt ein (Trennbare Verben)
+    "24": "chapter8",
+    "25": "chapter8",
+
+    // 9 Helfen Sie mir! (Imperativ)
+    "26": "chapter9",
+    "27": "chapter9",
+
+    // Partnerseite 1: Konjugation (Wechselspiel)
+    "28": "partnerseite1_konjugation",
+    "29": "partnerseite1_konjugation",
+
+    // ==========================================
+    // ABSCHNITT: SÄTZE UND FRAGEN (SEITE 30 - 39)
+    // ==========================================
+    
+    // 10 Wer? Wie? Wo? Was? (Fragen mit Fragewort)
+    "30": "chapter10",
+    "31": "chapter10",
+
+    // 11 Lernen Sie Deutsch? (Ja-/Nein-Fragen und Antworten)
+    "32": "chapter11",
+    "33": "chapter11",
+
+    // 12 Am Abend essen wir Pizza (Position 2 im Satz)
+    "34": "chapter12",
+    "35": "chapter12",
+
+    // 13 Ich gehe ... schwimmen (Zwei feste Positionen im Satz)
+    "36": "chapter13",
+    "37": "chapter13",
+
+    // Partnerseite 2: Fragen (Wechselspiel)
+    "38": "partnerseite2_fragen",
+    "39": "partnerseite2_fragen",
+
+    // ==========================================
+    // ABSCHNITT: PRONOMEN, NOMEN UND ARTIKEL (SEITE 40 - 63)
+    // ==========================================
+    
+    // 14 Die Männer, die Frauen, die Babys (Nomen: Plural)
+    "40": "chapter14",
+    "41": "chapter14",
+
+    // 15 Der, das die – ein, ein, eine (Artikel: definit, indefinit, kein Artikel)
+    "42": "chapter15",
+    "43": "chapter15",
+
+    // 16 Ich koche nicht. Ich habe keine Zeit. (Negation)
+    "44": "chapter16",
+    "45": "chapter16",
+
+    // 17 Der Mann isst den Fisch (Akkusativ)
+    "46": "chapter17",
+    "47": "chapter17",
+
+    // 18 Ich fahre mit dem Auto (Dativ)
+    "48": "chapter17",
+    "49": "chapter17",
+
+    // 19 Mein, dein, unser (Possessivartikel)
+    "50": "chapter19",
+    "51": "chapter19",
+
+    // 20 Welcher? – Dieser! (Artikel: interrogativ und demonstrativ)
+    "52": "chapter20",
+    "53": "chapter20",
+
+    // 21 Nur mit dir – nie ohne dich (Personalpronomen: Akkusativ und Dativ)
+    "54": "chapter21",
+    "55": "chapter21",
+
+    // 22 Ich kaufe meinem Sohn einen Ball (Verben mit Akkusativ und Dativ)
+    "56": "chapter22",
+    "57": "chapter22",
+
+    // 23 Ich helfe dir, du dankst mir (Verben mit Dativ)
+    "58": "chapter23",
+    "59": "chapter23",
+
+    // 24 Wem schenkst du was? (Frage nach Personen und Sachen)
+    "60": "chapter24",
+    "61": "chapter24",
+
+    // Partnerseite 3: Akkusativ und Dativ
+    "62": "partnerseite3_akkusativ_und_dativ",
+    "63": "partnerseite3_akkusativ_und_dativ",
+    
+    
+    // ==========================================
     // ABSCHNITT: VERBEN 2 (SEITE 64 - 78)
     // ==========================================
     
