@@ -82,10 +82,84 @@ const pageToChapterMap = {
 
     // Partnerseite 5: Wechselpräpositionen (Malspiel)
     "96": "partnerseite5_wechselpraepositionen",
+    "97": "partnerseite5_wechselpraepositionen",
+
+    // ==========================================
+    // ABSCHNITT: ADJEKTIVE 1 (SEITE 98 - 107)
+    // ==========================================
     
-    // Chapter 44 Map
+    // 40 Ein netter Mann! Ich liebe den netten Mann (Nominativ und Akkusativ)
+    "98": "chapter40",
+    "99": "chapter40",
+
+    // 41 Am ersten Mai (Nominativ, Akkusativ und Dativ)
+    "100": "chapter41",
+    "101": "chapter41",
+
+    // 42 Schneller als ... (Komparativ und Vergleichssätze)
+    "102": "chapter42",
+    "103": "chapter42",
+
+    // 43 Der kleinste Mann läuft am schnellsten (Superlativ)
+    "104": "chapter43",
+    "105": "chapter43",
+
+    // Partnerseite 6: Adjektivdeklination (Würfelspiel)
+    "106": "partnerseite6_adjektivdeklination",
+    "107": "partnerseite6_adjektivdeklination",
+
+    // ==========================================
+    // ABSCHNITT: SÄTZE UND SATZVERBINDUNGEN 1 (SEITE 108 - 115)
+    // ==========================================
+    
+    // 44 Und, aber, oder, denn (Hauptsätze verbinden (Position 0))
     "108": "chapter44",
-    "109": "chapter44"
+    "109": "chapter44",
+
+    // 45 Deshalb, sonst, dann, danach (Hauptsätze verbinden (Position 1))
+    "110": "chapter45",
+    "111": "chapter45",
+
+    // 46 ..., weil ich Deutsch lernen möchte. (Nebensätze mit weil, wenn und dass)
+    "112": "chapter46",
+    "113": "chapter46",
+
+    // Partnerseite 7: Nebensätze (Wechselspiel)
+    "114": "partnerseite7_nebensaetze",
+    "115": "partnerseite7_nebensaetze",
+
+    // ==========================================
+    // ABSCHNITT: WÖRTER UND WORTBILDUNG (SEITE 116 - 129)
+    // ==========================================
+    
+    // 47 Kinderarzt oder Arztkinder? (Komposita)
+    "116": "chapter47",
+    "117": "chapter47",
+
+    // 48 Ich bin dann mal weg (Zusammengesetzte Verben)
+    "118": "chapter48",
+    "119": "chapter48",
+
+    // 49 Der, die oder das? (Genusregeln)
+    "120": "chapter49",
+    "121": "chapter49",
+
+    // 50 Was heißt das denn? (Partikeln)
+    "122": "chapter50",
+    "123": "chapter50",
+
+    // 51 -chen, -lein, -er, -in, -ung (Aus Wörtern neue Wörter machen)
+    "124": "chapter51",
+    "125": "chapter51",
+
+    // 52 Nicht und nichts, noch nicht und nicht mehr (Negationswörter)
+    "126": "chapter52",
+    "127": "chapter52",
+
+    // 53 Ich bin oben. Komm auch nach oben. (Lokale Adverbien: Position und Direktion)
+    "128": "chapter53",
+    "129": "chapter53"
+    
 };
 
 window.addEventListener('hashchange', async () => {
