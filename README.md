@@ -1,3 +1,4 @@
+```
 my-deutsch-learning-app/
 │
 ├── deutsch_learning_app.html
@@ -7,3 +8,4 @@ my-deutsch-learning-app/
     └── chapters/
         ├── ch_44.json
         └── ch_45.json
+```
