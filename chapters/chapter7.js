@@ -8,42 +8,51 @@ export const chapter7 = {
             <div class="page-render-container">
                 <div class="page-header-meta">
                     <div class="page-title-main"><span>A1 | 07</span> Der Imperativ</div>
-                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--brand-plum);">Aufforderungen und Bitten (S. 22)</div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--brand-plum);">Aufforderungen, Bitten und Ratschläge (S. 22)</div>
                 </div>
 
-                <div style="background: #fff8e1; border-left: 4px solid #ffb300; padding: 12px; margin-bottom: 25px; font-size: 0.95rem;">
-                    💡 <b>Grammatik-Regel:</b> Der Imperativ hat drei Hauptformen im Singular und Plural sowie die Höflichkeitsform:
-                    <br><strong style="color: #b71c1c; font-family: monospace;">Sie-Form (Infinitiv + Sie) • ihr-Form (Verbstamm + t) • du-Form (Verbstamm ohne Endung)</strong>
+                <div style="background: #fff8e1; border-left: 4px solid #ffb300; padding: 15px; margin-bottom: 25px; border-radius: 0 4px 4px 0; font-size: 0.95rem; line-height: 1.6;">
+                    📌 <strong>Formenbildung im Imperativ:</strong> Der Imperativ hat drei Formen, abhängig davon, wen man anspricht. Das Verb steht immer auf <strong>Position 1</strong>.
+                    <br>• Höflichkeitsform (Sie): Infinitiv + Sie.
+                    <br>• Plural (ihr): Ihr-Form ohne das Pronomen "ihr".
+                    <br>• Singular (du): Du-Form ohne "-st" und ohne das Pronomen "du".
                 </div>
 
-                <div class="grid-syntax-table" style="grid-template-columns: 1fr 1.2fr 1.2fr 1.2fr; font-size: 0.9rem; margin-bottom: 25px;">
-                    <div class="grid-cell grid-header">Infinitiv</div>
-                    <div class="grid-cell grid-header">Höflich (Sie)</div>
-                    <div class="grid-cell grid-header">Ihr (Plural)</div>
-                    <div class="grid-cell grid-header">Du (Singular)</div>
+                <div class="grid-syntax-table" style="grid-template-columns: 1.2fr 1.5fr 1.3fr 1.3fr; margin-bottom: 25px; font-size: 0.95rem;">
+                    <div class="grid-cell grid-header" style="background:#f5f5f5;">Infinitiv</div>
+                    <div class="grid-cell grid-header" style="background:#f5f5f5;">Sie (Höflich)</div>
+                    <div class="grid-cell grid-header" style="background:#f5f5f5;">ihr (Plural)</div>
+                    <div class="grid-cell grid-header" style="background:#f5f5f5;">du (Singular)</div>
 
                     <div class="grid-cell" style="font-weight:bold;">machen</div>
-                    <div class="grid-cell"><b>Machen Sie</b> bitte!</div>
-                    <div class="grid-cell"><b>Macht</b> bitte!</div>
-                    <div class="grid-cell"><b>Mach</b> bitte!</div>
+                    <div class="grid-cell"><b>Machen Sie</b> bitte das Fenster zu!</div>
+                    <div class="grid-cell"><b>Macht</b> das Fenster zu!</div>
+                    <div class="grid-cell"><b>Mach</b> das Fenster zu!</div>
 
-                    <div class="grid-cell" style="font-weight:bold;">arbeiten</div>
-                    <div class="grid-cell"><b>Arbeiten Sie</b>!</div>
-                    <div class="grid-cell"><b>Arbeitet</b>!</div>
-                    <div class="grid-cell"><b>Arbeite</b>! <small>(+e)</small></div>
+                    <div class="grid-cell" style="font-weight:bold;">warten</div>
+                    <div class="grid-cell"><b>Warten Sie</b> einen Moment!</div>
+                    <div class="grid-cell"><b>Wartet</b> einen Moment!</div>
+                    <div class="grid-cell"><b>Warte</b> einen Moment! <small>(+e)</small></div>
 
-                    <div class="grid-cell" style="font-weight:bold;">lesen</div>
-                    <div class="grid-cell"><b>Lesen Sie</b>!</div>
-                    <div class="grid-cell"><b>Lest</b>!</div>
-                    <div class="grid-cell"><b>Lies</b>! <small>(e ➔ ie)</small></div>
+                    <div class="grid-cell" style="font-weight:bold;">mitkommen</div>
+                    <div class="grid-cell"><b>Kommen Sie</b> bitte <b>mit</b>!</div>
+                    <div class="grid-cell"><b>Kommt mit</b>!</div>
+                    <div class="grid-cell"><b>Komm mit</b>!</div>
                 </div>
 
-                <div class="exercise-headline"><strong>1</strong> Bilden Sie die korrekte Imperativform (du-Form).</div>
-                <div style="background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 6px; line-height: 2.3;">
-                    1 &nbsp; (fragen) &rarr; <input type="text" class="inline-blank" style="width: 80px;"> den Lehrer doch mal!<br>
-                    2 &nbsp; (fahren) &rarr; <input type="text" class="inline-blank" style="width: 80px;"> bitte nicht so schnell!<br>
-                    3 &nbsp; (geben) &rarr; <input type="text" class="inline-blank" style="width: 80px;"> mir bitte das Buch.<br>
-                    4 &nbsp; (hören) &rarr; <input type="text" class="inline-blank" style="width: 80px;"> gut zu!
+                <blockquote>
+                    ⚠️ <strong>Besonderheit bei "sein":</strong>
+                    <br>• Sie ➔ <b>Seien Sie</b> vorsichtig!
+                    <br>• ihr ➔ <b>Seid</b> leise!
+                    <br>• du ➔ <b>Sei</b> glücklich!
+                </blockquote>
+
+                <div class="exercise-headline"><strong>1</strong> Bilden Sie den Imperativ in der <em>du-Form</em>.</div>
+                <div style="background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 6px; line-height: 2.3;">
+                    1 &nbsp; (fragen) &rarr; <input type="text" class="inline-blank" style="width: 100px;"> doch einfach mal den Lehrer!<br>
+                    2 &nbsp; (zuhören) &rarr; <input type="text" class="inline-blank" style="width: 100px;"> mir bitte aufmerksam <input type="text" class="inline-blank" style="width: 50px;">!<br>
+                    3 &nbsp; (trinken) &rarr; <input type="text" class="inline-blank" style="width: 100px;"> deinen heißen Tee aus.<br>
+                    4 &nbsp; (entspannen) &rarr; <input type="text" class="inline-blank" style="width: 100px;"> dich am Wochenende!
                 </div>
 
                 <div class="page-navigation-footer" style="margin-top:20px;">
@@ -56,24 +65,30 @@ export const chapter7 = {
             <div class="page-render-container">
                 <div class="page-header-meta">
                     <div class="page-title-main"><span>A1 | 07</span> Übungen</div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Imperativformen richtig anwenden (S. 23)</div>
                 </div>
 
-                <div class="exercise-headline"><strong>2</strong> Wählen Sie die passende Form (ihr-Form oder Sie-Form).</div>
+                <div class="exercise-headline"><strong>2</strong> Ergänzen Sie die Sätze in der jeweils geforderten Form.</div>
                 <div style="background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.4;">
-                    1 &nbsp; Kinder, <input type="text" class="inline-blank" style="width: 80px;"> (sein) bitte endlich leise!<br>
-                    2 &nbsp; Herr Müller, <input type="text" class="inline-blank" style="width: 100px;"> (unterschreiben) Sie hier.<br>
-                    3 &nbsp; Freunde, <input type="text" class="inline-blank" style="width: 80px;"> (kommen) schnell her!<br>
-                    4 &nbsp; Frau Linz, <input type="text" class="inline-blank" style="width: 100px;"> (nehmen) Sie Platz.
+                    1 &nbsp; <strong>(Sie-Form)</strong> Bitte <input type="text" class="inline-blank" style="width: 120px;"> Sie hier Ihren Namen <input type="text" class="inline-blank" style="width: 60px;">! (eintragen)<br>
+                    2 &nbsp; <strong>(ihr-Form)</strong> Kinder, <input type="text" class="inline-blank" style="width: 100px;"> eure Hausaufgaben! (machen)<br>
+                    3 &nbsp; <strong>(du-Form)</strong> <input type="text" class="inline-blank" style="width: 100px;"> nicht so traurig! (sein)<br>
+                    4 &nbsp; <strong>(Sie-Form)</strong> <input type="text" class="inline-blank" style="width: 120px;"> Sie bitte pünktlich! (sein)
                 </div>
 
-                <div class="exercise-headline"><strong>3</strong> Wählen Sie den richtigen Imperativ-Stil aus.</div>
-                <div style="background: #fafafa; border: 1px solid #ccc; padding: 15px; border-radius: 6px; line-height: 2.5;">
-                    1 &nbsp; Anmelden im Sekretariat (Höflich): 
-                    <select class="inline-blank"><option value="">---</option><option>Melden Sie sich an</option><option>Meldet euch an</option></select>.<br>
-                    2 &nbsp; Schneller laufen (ihr): 
-                    <select class="inline-blank"><option value="">---</option><option>Lauft schneller</option><option>Lauf schneller</option></select>.<br>
-                    3 &nbsp; Geduldig sein (du): 
-                    <select class="inline-blank"><option value="">---</option><option>Sei geduldig</option><option>Seid geduldig</option></select>.
+                <div class="exercise-headline"><strong>3</strong> Wählen Sie die passende stilistische Variante.</div>
+                <div style="background: #fafafa; border: 1px solid #ccc; padding: 15px; border-radius: 6px; line-height: 2.4;">
+                    1 &nbsp; Herr Doktor, bitte helfen Sie mir! ➔ 
+                    <select class="inline-blank"><option value="">---</option><option>Helfen Sie mir bitte!</option><option>Hilf mir bitte!</option></select>.<br>
+                    2 &nbsp; Ihr müsst schneller laufen! ➔ 
+                    <select class="inline-blank"><option value="">---</option><option>Lauft schneller!</option><option>Lauf schneller!</option></select>.<br>
+                    3 &nbsp; Du musst den Salat essen! ➔ 
+                    <select class="inline-blank"><option value="">---</option><option>Iss den Salat!</option><option>Esst den Salat!</option></select>.
+                </div>
+
+                <div class="page-navigation-footer" style="margin-top:20px;">
+                    <a href="#page-22" class="nav-btn">&larr; Zurück zu S. 22</a>
+                    <div></div>
                 </div>
             </div>
         `
