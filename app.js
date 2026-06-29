@@ -279,9 +279,43 @@ const pageToChapterMap = {
 
     // 53 Ich bin oben. Komm auch nach oben. (Lokale Adverbien: Position und Direktion)
     "128": "chapter53",
-    "129": "chapter53"
+    "129": "chapter53",
+
+    // ==========================================
+    // ABSCHNITT: VERBEN 3 (SEITE 130 - ...)
+    // ==========================================
+
+    // 54 Er kam, sah und sagte (Präteritum)
+    "130": "chapter54",
+    "131": "chapter54",
+
+    // 55 Ich hatte zu lange geschlafen (Plusquamperfekt)
+    "132": "chapter55",
+    "133": "chapter55",
+
+    // 65 Werden, werden, werden ... (Funktionen von werden)
+    "152": "chapter65",
+    "153": "chapter65",
+
+    // 66 Leben und leben lassen (Das Verb lassen)
+    "154": "chapter66",
+    "155": "chapter66"
     
 };
+
+function loadChapterScript(chapterName) {
+    return new Promise((resolve, reject) => {
+        if (window[chapterName]) {
+            resolve(window[chapterName]);
+            return;
+        }
+        const script = document.createElement('script');
+        script.src = `./chapters/${chapterName}.js`;
+        script.onload = () => resolve(window[chapterName]);
+        script.onerror = () => reject(new Error(`Failed to load: ${chapterName}.js`));
+        document.head.appendChild(script);
+    });
+}
 
 window.addEventListener('hashchange', async () => {
     const hash = window.location.hash;
@@ -296,9 +330,7 @@ window.addEventListener('hashchange', async () => {
     }
 
     try {
-        // Dynamic asynchronous import (Lazy Loading)
-        const module = await import(`./chapters/${chapterName}.js`);
-        const chapterData = module[chapterName];
+        const chapterData = await loadChapterScript(chapterName);
         
         if (chapterData && chapterData.pages[pageNum]) {
             workspace.innerHTML = chapterData.pages[pageNum];
