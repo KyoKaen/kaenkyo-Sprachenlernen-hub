@@ -165,7 +165,7 @@ window.chapter50 = {
 
                 <div class="page-navigation-footer" style="margin-top:20px;">
                     <a href="#page-122" class="nav-btn">&larr; Zurück zu S. 122</a>
-                    <div></div>
+                    <a href="#page-123-note" class="nav-btn" style="background: #F9A825; border-color: #F9A825;">📝 Notizen &amp; Erklärungen</a>
                 </div>
             </div>
         `
