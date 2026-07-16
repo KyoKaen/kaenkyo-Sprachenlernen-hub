@@ -268,6 +268,7 @@ const pageToChapterMap = {
     // 50 Was heißt das denn? (Partikeln)
     "122": "chapter50",
     "123": "chapter50",
+    "123-note": "chapter50-note",
 
     // 51 -chen, -lein, -er, -in, -ung (Aus Wörtern neue Wörter machen)
     "124": "chapter51",
