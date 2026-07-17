@@ -98,8 +98,8 @@ const pageToChapterMap = {
     "47": "chapter17",
 
     // 18 Ich fahre mit dem Auto (Dativ)
-    "48": "chapter17",
-    "49": "chapter17",
+    "48": "chapter18",
+    "49": "chapter18",
 
     // 19 Mein, dein, unser (Possessivartikel)
     "50": "chapter19",
@@ -294,13 +294,33 @@ const pageToChapterMap = {
     "132": "chapter55",
     "133": "chapter55",
 
+    // 56 Ich wasche mir die Hände (Reflexivpronomen im Akkusativ und Dativ)
+    "134": "chapter56",
+    "135": "chapter56",
+
+    // 62 Der Baum wird gepflanzt (Passiv)
+    "146": "chapter62",
+    "147": "chapter62",
+
     // 65 Werden, werden, werden ... (Funktionen von werden)
     "152": "chapter65",
     "153": "chapter65",
 
     // 66 Leben und leben lassen (Das Verb lassen)
     "154": "chapter66",
-    "155": "chapter66"
+    "155": "chapter66",
+
+    // ==========================================
+    // ABSCHNITT: NEBENSÄTZE 2 (SEITE 180 - ...)
+    // ==========================================
+
+    // 77 Ich gehe, wenn ... / Ich ging, als ... (Temporale Nebensätze mit wenn und als)
+    "180": "chapter77",
+    "181": "chapter77",
+
+    // 78 Während, bevor, nachdem, seit (Temporale Nebensätze)
+    "182": "chapter78",
+    "183": "chapter78"
     
 };
 
