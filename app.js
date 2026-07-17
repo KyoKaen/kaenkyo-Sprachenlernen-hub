@@ -380,3 +380,15 @@ function renderPlaceholder(pageNum, statusTitle, statusBody) {
 if (window.location.hash) {
     window.dispatchEvent(new Event('hashchange'));
 }
+
+
+// Make entire TOC row clickable — clicking anywhere on the row (except the
+// page-number links themselves) navigates to the first page of that chapter.
+document.querySelectorAll('.toc-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+        if (e.target.closest('.page-link')) return;
+        const firstLink = item.querySelector('.page-link');
+        if (firstLink) firstLink.click();
+    });
+});
+
