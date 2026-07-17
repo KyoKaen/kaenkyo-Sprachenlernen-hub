@@ -172,10 +172,19 @@ body {
     padding: 8px 0;
     border-bottom: 1px dashed var(--border-color);
     transition: background-color 0.2s ease;
+    cursor: pointer;
 }
 
 .toc-item:hover {
     background-color: var(--bg-light);
+}
+
+.toc-item:hover .chapter-num {
+    color: var(--brand-orange);
+}
+
+.toc-item:hover .chapter-example {
+    color: var(--brand-plum);
 }
 
 .level-badge {
