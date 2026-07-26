@@ -324,18 +324,25 @@ const pageToChapterMap = {
     
 };
 
-function loadChapterScript(chapterName) {
-    return new Promise((resolve, reject) => {
-        if (window[chapterName]) {
-            resolve(window[chapterName]);
-            return;
-        }
-        const script = document.createElement('script');
-        script.src = `./chapters/${chapterName}.js`;
-        script.onload = () => resolve(window[chapterName]);
-        script.onerror = () => reject(new Error(`Failed to load: ${chapterName}.js`));
-        document.head.appendChild(script);
-    });
+async function loadChapterScript(chapterName) {
+    if (window[chapterName]) {
+        return window[chapterName];
+    }
+
+    try {
+        const chapterModule = await import(`./chapters/${chapterName}.js`);
+        return chapterModule[chapterName] || window[chapterName];
+    } catch (moduleError) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = `./chapters/${chapterName}.js`;
+            script.onload = () => resolve(window[chapterName]);
+            script.onerror = () => reject(
+                new Error(`Failed to load: ${chapterName}.js (${moduleError.message})`)
+            );
+            document.head.appendChild(script);
+        });
+    }
 }
 
 window.addEventListener('hashchange', async () => {
@@ -391,4 +398,3 @@ document.querySelectorAll('.toc-item').forEach(item => {
         if (firstLink) firstLink.click();
     });
 });
-
