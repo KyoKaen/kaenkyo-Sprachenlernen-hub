@@ -11,9 +11,6 @@ export const chapter40 = {
                     <div style="font-weight: bold; font-size: 1.1rem; color: var(--brand-plum);">Nominativ und Akkusativ (S. 98)</div>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <img src="./print/chapter/c40/c40_98.png" alt="Kapitel 40 Seite 98" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
-                </div>
 
                 <div class="grid-syntax-table" style="grid-template-columns: 1fr 1.2fr 1.2fr 1.2fr; margin-bottom: 20px; font-size: 0.9rem;">
                     <div class="grid-cell grid-header">Kasus</div>
@@ -68,9 +65,6 @@ export const chapter40 = {
                     <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Nominativ und Akkusativ (S. 99)</div>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <img src="./print/chapter/c40/c40_99.png" alt="Kapitel 40 Seite 99" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
-                </div>
 
                 <div class="exercise-headline"><strong>3</strong> Ergänzen Sie die Endungen (wenn nötig).</div>
                 <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.2; margin-bottom: 20px;">

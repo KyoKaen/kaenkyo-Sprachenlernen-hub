@@ -1,0 +1,16 @@
+# Local scratch space for photo triage (previews, temp conversions).
+# Raw camera photos and generated previews should never enter the repo.
+.work/
+*.HEIC
+*.heic
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Python bytecode from tools/
+__pycache__/
+*.pyc
