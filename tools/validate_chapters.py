@@ -8,7 +8,10 @@ Checks, for every ``chapters/*.js`` module:
     ``window[...]`` global assignment),
 3.  every page key it declares is routed in ``app.js``,
 4.  every page routed to it in ``app.js`` actually exists in the module,
-5.  every page fragment is non-empty and has balanced HTML tags.
+5.  every page fragment is non-empty and has balanced HTML tags,
+6.  no page embeds a raster image -- chapter modules must be pure formatted
+    content; page scans live in ``print/`` as reference only (use
+    ``--allow-images`` to disable this rule).
 
 Usage:
     python3 tools/validate_chapters.py --root .
@@ -177,10 +180,26 @@ def check_html(fragment: str) -> list[str]:
     return checker.finish()
 
 
+IMAGE_RE = re.compile(
+    r"<img\b|background-image\s*:|<picture\b|<svg\b\s*[^>]*\bxlink:href",
+    re.IGNORECASE,
+)
+
+
+def check_no_images(fragment: str) -> list[str]:
+    """Chapter modules must be pure formatted content, not embedded scans."""
+    return ["embeds an image"] if IMAGE_RE.search(fragment) else []
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--root", default=".", help="repository root")
     ap.add_argument("--only-problems", action="store_true", help="hide modules that are fully OK")
+    ap.add_argument(
+        "--allow-images",
+        action="store_true",
+        help="permit <img>/background-image inside chapter modules (off by default)",
+    )
     args = ap.parse_args()
 
     root = os.path.abspath(args.root)
@@ -233,6 +252,9 @@ def main() -> int:
                     seen = list(dict.fromkeys(html_errors))[:3]
                     notes.append(f"page {page}: " + ", ".join(seen))
                     status = "BAD_HTML"
+                if not args.allow_images and check_no_images(html):
+                    notes.append(f"page {page}: embeds an image (use print/ for scans)")
+                    status = "HAS_IMAGE"
 
             if status != "OK":
                 problems += 1

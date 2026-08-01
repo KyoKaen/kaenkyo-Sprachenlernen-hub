@@ -36,8 +36,27 @@ Auto-generated tracking table for the digital edition of *Grammatik aktiv A1-B1*
 
 ```bash
 tools/make_status.sh                          # rewrites this file
-python3 tools/validate_chapters.py --root .   # parse + routing + HTML checks
+python3 tools/validate_chapters.py --root .   # parse + routing + HTML + no-image checks
 ```
+
+## Conventions for `chapters/chapterN.js`
+
+1. **No images.** A chapter module contains only well-formatted HTML content -
+   grammar tables, tip boxes and fillable exercises. Page scans stay in
+   `print/chapter/cN/` as *reference material only* and are never embedded.
+   `tools/validate_chapters.py` reports `HAS_IMAGE` if this is violated.
+2. **Shared design.** Reuse the existing classes so every chapter looks the
+   same: `page-render-container`, `page-header-meta`, `page-title-main`,
+   `grid-syntax-table` + `grid-cell` / `grid-header`, `exercise-headline`,
+   `tip-box-lightbulb`, `options-bank-box`, `inline-blank`,
+   `full-width-blank`, `page-navigation-footer` + `nav-btn`. Colours come from
+   the CSS variables `--brand-plum`, `--exercise-blue`, `--brand-orange`,
+   `--text-muted`.
+3. **Blank exercises.** The `cN.md` transcripts contain hand-written practice
+   answers. Strip them back to empty inputs when building the module.
+4. **Export shape.**
+   `export const chapterN = { title, level, pages: { "<page>": "<html>" } };`
+   Page keys must match the `pageToChapterMap` entries in `app.js`.
 
 ## Legend
 
