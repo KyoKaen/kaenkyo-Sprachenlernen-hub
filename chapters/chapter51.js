@@ -1,97 +1,219 @@
 // chapters/chapter51.js
 
 export const chapter51 = {
-    title: "Sätze verbinden: Hauptsätze (und, oder, aber, sondern, denn)",
-    level: "A1/A2",
+    title: "51 -chen, -lein, -er, -in, -ung — Aus Wörtern neue Wörter machen",
+    level: "A2",
     pages: {
         "124": `
             <div class="page-render-container">
                 <div class="page-header-meta">
-                    <div class="page-title-main"><span>A1/A2 | 51</span> Sätze verbinden: Hauptsätze</div>
-                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--brand-plum);">Konjunktionen auf Position 0 (S. 124)</div>
+                    <div class="page-title-main"><span>A2 | 51</span> -chen, -lein, -er, -in, -ung</div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--brand-plum);">Aus Wörtern neue Wörter machen (S. 124)</div>
                 </div>
 
-                <div style="background: #fff8e1; border-left: 4px solid #ffb300; padding: 15px; margin-bottom: 25px; border-radius: 0 4px 4px 0; font-size: 0.95rem; line-height: 1.6;">
-                    📍 <strong>Die Position 0 Regel:</strong> Die Konjunktionen <b>und, oder, aber, sondern, denn</b> verbinden zwei Hauptsätze. Sie stehen auf <strong>Position 0</strong>, das heißt das Subjekt und das konjugierte Verb folgen direkt danach auf den Positionen 1 und 2.
+                <!-- Wortbildungstabelle -->
+                <div class="grid-syntax-table" style="grid-template-columns: 1.1fr 1.6fr 1.6fr; margin-bottom: 25px; font-size: 0.93rem;">
+                    <div class="grid-cell grid-header" style="background:#f4f4f4;">Bildung</div>
+                    <div class="grid-cell grid-header" style="background:#f4f4f4;">Bedeutung und Regel</div>
+                    <div class="grid-cell grid-header" style="background:#FFE0B2; color:#E65100;">Beispiele</div>
+
+                    <div class="grid-cell" style="font-weight:bold; background:#faf3ec;">Nomen + <em>-chen</em>, <em>-lein</em></div>
+                    <div class="grid-cell">
+                        <span style="color:#C2185B;">-chen</span> und <span style="color:#C2185B;">-lein</span> machen die Sache <strong>klein</strong> (Diminutiv).<br>
+                        Der Artikel ist immer <strong>das</strong>,<br>
+                        der Plural hat <strong>keine Endung</strong>.<br>
+                        Es gibt <strong>oft einen Umlaut</strong>.
+                    </div>
+                    <div class="grid-cell">
+                        das Haus &ndash; das H&auml;us<span style="color:#C2185B;">chen</span><br>
+                        das Haus &ndash; das H&auml;us<span style="color:#C2185B;">lein</span>
+                    </div>
+
+                    <div class="grid-cell" style="font-weight:bold; background:#faf3ec;">Verbstamm + <em>-er</em></div>
+                    <div class="grid-cell">
+                        <span style="color:#C2185B;">m&auml;nnliche Personen</span><br>
+                        <span style="color:#C2185B;">Apparate / Maschinen</span><br><br>
+                        Der Artikel ist immer <strong>der</strong>,<br>
+                        der Plural hat <strong>keine Endung</strong>.<br>
+                        Es gibt <strong>oft einen Umlaut</strong>.
+                    </div>
+                    <div class="grid-cell">
+                        Fu&szlig;ball spielen &ndash; der Fu&szlig;ballspiel<span style="color:#C2185B;">er</span><br><br>
+                        kopieren &ndash; der Kopier<span style="color:#C2185B;">er</span>
+                    </div>
+
+                    <div class="grid-cell" style="font-weight:bold; background:#faf3ec;">Land + <em>-er</em></div>
+                    <div class="grid-cell">
+                        <span style="color:#C2185B;">m&auml;nnliche Personen aus einem Land</span><br>
+                        Der Artikel ist immer <strong>der</strong>.<br>
+                        Es gibt <strong>oft einen Umlaut</strong>.
+                    </div>
+                    <div class="grid-cell">
+                        das Ausland &ndash; der Ausl&auml;nd<span style="color:#C2185B;">er</span><br>
+                        die Schweiz &ndash; der Schweiz<span style="color:#C2185B;">er</span>
+                    </div>
+
+                    <div class="grid-cell" style="font-weight:bold; background:#faf3ec;">m&auml;nnliche Person + <em>-in</em></div>
+                    <div class="grid-cell">
+                        <span style="color:#C2185B;">weibliche Personen</span><br>
+                        Der Artikel ist immer <strong>die</strong>,<br>
+                        der Plural ist <strong>-nen</strong>.
+                    </div>
+                    <div class="grid-cell">
+                        der Ausl&auml;nder &ndash; die Ausl&auml;nder<span style="color:#C2185B;">in</span><br>
+                        der Physiker &ndash; die Physiker<span style="color:#C2185B;">in</span><br>
+                        der Pole &ndash; die Pol<span style="color:#C2185B;">in</span><br>
+                        <span style="color:#E65100;">&#9888;</span> der Deutsche &ndash; die Deutsche
+                    </div>
+
+                    <div class="grid-cell" style="font-weight:bold; background:#faf3ec;">Verbstamm + <em>-ung</em></div>
+                    <div class="grid-cell">
+                        <span style="color:#C2185B;">Nomen</span><br>
+                        Der Artikel ist immer <strong>die</strong>,<br>
+                        der Plural ist immer <strong>-en</strong>.
+                    </div>
+                    <div class="grid-cell">
+                        einladen &ndash; die Einlad<span style="color:#C2185B;">ung</span><br>
+                        sich versp&auml;ten &ndash; die Versp&auml;t<span style="color:#C2185B;">ung</span>
+                    </div>
+
+                    <div class="grid-cell" style="font-weight:bold; background:#faf3ec;">Infinitiv als Nomen</div>
+                    <div class="grid-cell">
+                        Der Artikel ist immer <strong>das</strong>.<br>
+                        Es gibt <strong>keinen Plural</strong>.<br>
+                        Oft stehen die Nomen <strong>ohne Artikel</strong> oder <strong>mit einer Pr&auml;position</strong>.
+                    </div>
+                    <div class="grid-cell">
+                        tanzen &ndash; das Tanzen<br>
+                        Ich finde Tanzen toll.<br>
+                        Beim Tanzen bin ich gl&uuml;cklich.<br>
+                        Zum Tanzen brauche ich gute Musik.
+                    </div>
                 </div>
 
-                <div class="grid-syntax-table" style="grid-template-columns: 1fr 1fr 4fr; margin-bottom: 25px; font-size: 0.95rem;">
-                    <div class="grid-cell grid-header" style="background:#f5f5f5;">Konjunktion</div>
-                    <div class="grid-cell grid-header" style="background:#f5f5f5;">Funktion</div>
-                    <div class="grid-cell grid-header" style="background:#f5f5f5;">Beispiel (Hauptsatz + Hauptsatz)</div>
-
-                    <div class="grid-cell" style="font-weight:bold; color:#1b5e20;">und</div>
-                    <div class="grid-cell">Aufzählung / Reihung</div>
-                    <div class="grid-cell">Ich trinke einen Tee <b>und</b> (ich) esse ein Brötchen.</div>
-
-                    <div class="grid-cell" style="font-weight:bold; color:#0d47a1;">oder</div>
-                    <div class="grid-cell">Alternative / Wahl</div>
-                    <div class="grid-cell">Gehen wir ins Kino <b>oder</b> bleiben wir heute zu Hause?</div>
-
-                    <div class="grid-cell" style="font-weight:bold; color:#b71c1c;">aber</div>
-                    <div class="grid-cell">Gegensatz / Einschränkung</div>
-                    <div class="grid-cell">Das Auto ist sehr schön, <b>aber</b> es ist zu teuer.</div>
-
-                    <div class="grid-cell" style="font-weight:bold; color:#e65100;">sondern</div>
-                    <div class="grid-cell">Korrektur (nach Negation)</div>
-                    <div class="grid-cell">Wir fahren nicht nach Spanien, <b>sondern</b> wir fliegen nach Italien.</div>
-
-                    <div class="grid-cell" style="font-weight:bold; color:#4a148c;">denn</div>
-                    <div class="grid-cell">Begründung (kausal)</div>
-                    <div class="grid-cell">Er kommt heute nicht, <b>denn</b> er ist leider krank.</div>
-                </div>
-
-                <div class="exercise-headline"><strong>1</strong> Welche Konjunktion passt? Kombinieren Sie die Sätze sinnvoll.</div>
-                <div style="background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 6px; line-height: 2.3;">
-                    1 &nbsp; Ich möchte einen Salat essen, <input type="text" class="inline-blank" style="width: 80px;"> ich habe keinen Hunger auf Fleisch. (aber / sondern)<br>
-                    2 &nbsp; Trinkst du lieber einen Kaffee <input type="text" class="inline-blank" style="width: 80px;"> möchtest du einen Saft? (oder / denn)<br>
-                    3 &nbsp; Er kauft kein Motorrad, <input type="text" class="inline-blank" style="width: 80px;"> er spart das Geld für ein Auto. (sondern / aber)<br>
-                    4 &nbsp; Wir können heute nicht kommen, <input type="text" class="inline-blank" style="width: 80px;"> wir müssen lange arbeiten. (denn / und)<br>
-                    5 &nbsp; Sie packt ihren Koffer <input type="text" class="inline-blank" style="width: 80px;"> sie fährt sofort zum Flughafen. (und / sondern)
+                <!-- Exercise 1 -->
+                <div class="exercise-headline"><strong>1</strong> Machen Sie die &bdquo;Sachen&ldquo; klein. Benutzen Sie die Endung <em>-chen</em> und Umlaute (wenn n&ouml;tig).</div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.3;">
+                    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 4px 18px;">
+                        <div>1 &nbsp; die Stadt &ndash; <input type="text" class="inline-blank" style="width:150px;" placeholder="das St&auml;dtchen"></div>
+                        <div>4 &nbsp; der Hund &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>7 &nbsp; das Brot &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>2 &nbsp; der Baum &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>5 &nbsp; der Finger &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>8 &nbsp; das Glas &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>3 &nbsp; das Kleid &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>6 &nbsp; das Kind &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                        <div>9 &nbsp; die Karte &ndash; <input type="text" class="inline-blank" style="width:150px;"></div>
+                    </div>
                 </div>
 
                 <div class="page-navigation-footer" style="margin-top:20px;">
                     <div></div>
-                    <a href="#page-125" class="nav-btn">Weiter zu Übungen S. 125 &rarr;</a>
+                    <a href="#page-125" class="nav-btn">Weiter zu &Uuml;bungen S. 125 &rarr;</a>
                 </div>
             </div>
         `,
         "125": `
             <div class="page-render-container">
                 <div class="page-header-meta">
-                    <div class="page-title-main"><span>A2 | 51</span> Übungen</div>
-                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Hauptsatzverbindungen vertiefen (S. 125)</div>
+                    <div class="page-title-main"><span>A2 | 51</span> &Uuml;bungen</div>
+                    <div style="font-weight: bold; font-size: 1.1rem; color: var(--exercise-blue);">Aus W&ouml;rtern neue W&ouml;rter machen (S. 125)</div>
                 </div>
 
-                <div class="exercise-headline"><strong>2</strong> Ergänzen Sie <em>aber, denn, oder, sondern</em> oder <em>und</em>.</div>
-                <div style="background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.4;">
-                    1 &nbsp; Thomas lernt jeden Tag fleißig Spanisch, <input type="text" class="inline-blank" style="width: 80px;"> er möchte in Madrid studieren.<br>
-                    2 &nbsp; Das Wetter ist bewölkt und kühl, <input type="text" class="inline-blank" style="width: 80px;"> es regnet zum Glück nicht.<br>
-                    3 &nbsp; Wir gehen morgen nicht ins Museum, <input type="text" class="inline-blank" style="width: 80px;"> wir machen einen Ausflug in die Berge.<br>
-                    4 &nbsp; Fährst du mit dem Bus zur Arbeit <input type="text" class="inline-blank" style="width: 80px;"> nimmst du das Fahrrad?<br>
-                    5 &nbsp; Sie räumt erst die Küche auf <input type="text" class="inline-blank" style="width: 80px;"> dann geht sie einkaufen.
+                <!-- Exercise 2 -->
+                <div class="exercise-headline"><strong>2</strong> Frauen oder M&auml;nner? Ordnen Sie zu und schreiben Sie im Singular und Plural.</div>
+                <div class="options-bank-box" style="margin-bottom: 12px; font-size:0.95rem;">
+                    <s style="color: var(--text-muted);">Ausl&auml;nderinnen</s> &middot; <s style="color: var(--text-muted);">Piloten</s> &middot;
+                    Mathematiker &middot; Verk&auml;uferin &middot; Studenten &middot; Studentin &middot; Freunde &middot; Freundin
+                </div>
+                <div class="grid-syntax-table" style="grid-template-columns: 1fr 1fr; margin-bottom: 25px; font-size:0.95rem;">
+                    <div class="grid-cell grid-header" style="background:#f4f4f4;"><em>Frauen</em></div>
+                    <div class="grid-cell grid-header" style="background:#f4f4f4;"><em>M&auml;nner</em></div>
+
+                    <div class="grid-cell" style="color: var(--text-muted); font-style: italic;">die Ausl&auml;nderin, &ndash;nen</div>
+                    <div class="grid-cell" style="color: var(--text-muted); font-style: italic;">der Pilot, &ndash;en</div>
+
+                    <div class="grid-cell"><input type="text" class="full-width-blank" style="width:92%;"></div>
+                    <div class="grid-cell"><input type="text" class="full-width-blank" style="width:92%;"></div>
+
+                    <div class="grid-cell"><input type="text" class="full-width-blank" style="width:92%;"></div>
+                    <div class="grid-cell"><input type="text" class="full-width-blank" style="width:92%;"></div>
+
+                    <div class="grid-cell"><input type="text" class="full-width-blank" style="width:92%;"></div>
+                    <div class="grid-cell"><input type="text" class="full-width-blank" style="width:92%;"></div>
                 </div>
 
-                <div class="exercise-headline"><strong>3</strong> Zwei Sätze verbinden. Achten Sie auf die richtige Satzstellung.</div>
-                <div style="background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 6px; margin-bottom: 25px; line-height: 2.2;">
-                    1 &nbsp; Er ist müde. Er geht noch nicht ins Bett. (aber)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&rarr; <input type="text" class="full-width-blank" style="width: 85%;"><br>
-                    2 &nbsp; Ich esse kein Eis. Ich nehme ein Stück Kuchen. (sondern)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&rarr; <input type="text" class="full-width-blank" style="width: 85%;"><br>
-                    3 &nbsp; Sie bleibt zu Hause. Sie erwartet einen wichtigen Brief. (denn)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&rarr; <input type="text" class="full-width-blank" style="width: 85%;">
+                <!-- Exercise 3 -->
+                <div class="exercise-headline"><strong>3</strong> Wie hei&szlig;t der Apparat? Erg&auml;nzen Sie die Nomen.</div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.4; margin-bottom: 25px;">
+                    1 &nbsp; Mit dem Apparat kann man fernsehen: &nbsp; Das ist ein <input type="text" class="inline-blank" style="width:220px;">.<br>
+                    2 &nbsp; Mit dem Apparat kann man Reis kochen: &nbsp; Das ist ein <input type="text" class="inline-blank" style="width:220px;">.<br>
+                    3 &nbsp; Mit dem Apparat kann man W&auml;sche trocknen: &nbsp; Das ist ein <input type="text" class="inline-blank" style="width:220px;">.
                 </div>
 
-                <div class="exercise-headline"><strong>4</strong> Was ist semantisch korrekt? Wählen Sie die passende Option.</div>
-                <div style="background: #fafafa; border: 1px solid #ccc; padding: 15px; border-radius: 6px; line-height: 2.4;">
-                    1 &nbsp; Ich mag Kaffee, 
-                    <select class="inline-blank"><option value="">---</option><option>aber ich trinke keinen Zucker dazu</option><option>denn ich trinke keinen Zucker dazu</option></select>.<br>
-                    2 &nbsp; Sie kauft das Kleid nicht, 
-                    <select class="inline-blank"><option value="">---</option><option>sondern sie sucht ein anderes</option><option>oder sie sucht ein anderes</option></select>.
+                <!-- Exercise 4 -->
+                <div class="exercise-headline"><strong>4</strong> Bilden Sie Nomen mit <em>-ung</em>. Schreiben Sie die Nomen mit Artikel.</div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.3; margin-bottom: 25px;">
+                    <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 4px 25px;">
+                        <div>1 &nbsp; l&ouml;sen &ndash; <input type="text" class="inline-blank" style="width:200px;"></div>
+                        <div>4 &nbsp; vorbereiten &ndash; <input type="text" class="inline-blank" style="width:200px;"></div>
+                        <div>2 &nbsp; wohnen &ndash; <input type="text" class="inline-blank" style="width:200px;"></div>
+                        <div>5 &nbsp; erinnern &ndash; <input type="text" class="inline-blank" style="width:200px;"></div>
+                        <div>3 &nbsp; meinen &ndash; <input type="text" class="inline-blank" style="width:200px;"></div>
+                        <div>6 &nbsp; erkl&auml;ren &ndash; <input type="text" class="inline-blank" style="width:200px;"></div>
+                    </div>
+                </div>
+
+                <!-- Exercise 5 -->
+                <div class="exercise-headline"><strong>5</strong> Verb oder Nomen? Erg&auml;nzen Sie.</div>
+                <div style="background: #f9f9f9; border: 1px solid #ddd; padding: 15px; border-radius: 6px; line-height: 2.4; margin-bottom: 25px;">
+                    <div style="margin-bottom:10px;">
+                        <strong>1</strong> &nbsp; erkl&auml;ren &middot; die Erkl&auml;rung<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Die <input type="text" class="inline-blank" style="width:170px;"> von Herrn Schmidt habe ich nicht verstanden.
+                        Herr M&uuml;ller kann viel besser <input type="text" class="inline-blank" style="width:170px;">, bei ihm verstehe ich immer alles.
+                    </div>
+                    <div style="margin-bottom:10px;">
+                        <strong>2</strong> &nbsp; wohnen &middot; die Wohnung<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Wo <input type="text" class="inline-blank" style="width:170px;"> Sie? &ndash; In der Hauptstra&szlig;e 3,
+                        unsere <input type="text" class="inline-blank" style="width:170px;"> liegt im 3. Stock.
+                    </div>
+                    <div>
+                        <strong>3</strong> &nbsp; l&ouml;sen &middot; die L&ouml;sung<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Ich kann die Aufgabe nicht <input type="text" class="inline-blank" style="width:170px;">.
+                        Guck doch mal hinten im Buch auf Seite 118, da steht die <input type="text" class="inline-blank" style="width:170px;">.
+                    </div>
+                </div>
+
+                <!-- Exercise 6 -->
+                <div class="exercise-headline"><strong>6</strong> Was machen Sie im Unterricht gerne, was k&ouml;nnen Sie gut? Bilden Sie aus den Verben Nomen.</div>
+                <div class="options-bank-box" style="margin-bottom: 12px; font-size:0.95rem;">
+                    <s style="color: var(--text-muted);">h&ouml;ren</s> &middot; lesen &middot; sprechen &middot; schreiben
+                </div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.4; margin-bottom: 25px;">
+                    1 &nbsp; Ich mag gerne H&ouml;rtexte. <input type="text" class="inline-blank" style="width:170px;" placeholder="Das H&ouml;ren"> finde ich am besten.<br>
+                    2 &nbsp; Ich bin sehr kommunikativ und spreche gerne mit anderen Leuten. <input type="text" class="inline-blank" style="width:170px;"> finde ich leicht.<br>
+                    3 &nbsp; Ich m&ouml;chte gerne deutsche Zeitungen lesen. Deshalb ist <input type="text" class="inline-blank" style="width:170px;"> f&uuml;r mich wichtig.<br>
+                    4 &nbsp; Ich brauche ein bisschen Zeit und arbeite gerne alleine. Deshalb gef&auml;llt mir <input type="text" class="inline-blank" style="width:170px;"> am besten.
+                </div>
+
+                <!-- Exercise 7 -->
+                <div class="exercise-headline"><strong>7</strong> Erg&auml;nzen Sie die Nomen.</div>
+                <div class="options-bank-box" style="margin-bottom: 12px; font-size:0.95rem;">
+                    <s style="color: var(--text-muted);">Lesen</s> &middot; Fernsehen &middot; Einkaufen &middot; Duschen &middot; Schreiben &middot; Joggen
+                </div>
+                <div style="background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 6px; line-height: 2.4;">
+                    <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 4px 25px;">
+                        <div>1 &nbsp; Zum <input type="text" class="inline-blank" style="width:140px;" placeholder="Lesen"> brauche ich eine Brille.</div>
+                        <div>4 &nbsp; Beim <input type="text" class="inline-blank" style="width:140px;"> singe ich.</div>
+                        <div>2 &nbsp; Zum <input type="text" class="inline-blank" style="width:140px;"> brauche ich das Auto.</div>
+                        <div>5 &nbsp; Beim <input type="text" class="inline-blank" style="width:140px;"> h&ouml;re ich Musik.</div>
+                        <div>3 &nbsp; Beim <input type="text" class="inline-blank" style="width:140px;"> esse ich Popcorn.</div>
+                        <div>6 &nbsp; Zum <input type="text" class="inline-blank" style="width:140px;"> nehme ich einen Stift.</div>
+                    </div>
                 </div>
 
                 <div class="page-navigation-footer" style="margin-top:20px;">
-                    <a href="#page-124" class="nav-btn">&larr; Zurück zu S. 124</a>
+                    <a href="#page-124" class="nav-btn">&larr; Zur&uuml;ck zur Erkl&auml;rung S. 124</a>
                     <div></div>
                 </div>
             </div>
