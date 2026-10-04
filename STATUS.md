@@ -71,7 +71,7 @@ Columns: `imgs` = page scans in `print/chapter/cN/`, `md` = non-empty transcript
 | partnerseite5_wechselpraepositionen | 96,97 | 0 | no | NEEDS_SOURCE |
 | partnerseite6_adjektivdeklination | 106,107 | 0 | no | NEEDS_SOURCE |
 | partnerseite7_nebensaetze | 114,115 | 0 | no | NEEDS_SOURCE |
-| chapter48 | 118,119 | 0 | no | NEEDS_SOURCE |
+| chapter48 | 118,119 | 0 | yes | MISSING_JS |
 
 ### B. Not yet routed in `app.js`
 
@@ -125,7 +125,7 @@ These have a TOC entry in `deutsch_learning_app.html` but no `pageToChapterMap` 
 | chapter28 | 70,71 | yes | esm | 70,71 | - | 0 | no | JS_COMPLETE | verify in browser |
 | chapter29 | 72,73 | yes | esm | 72,73 | - | 0 | no | JS_COMPLETE | verify in browser |
 | chapter30 | 74,75 | yes | esm | 74,75 | - | 2 | yes | JS_COMPLETE | verify in browser |
-| chapter31 | 76,77 | yes | esm | 76,77 | - | 0 | no | JS_COMPLETE | verify in browser |
+| chapter31 | 76,77 | yes | esm | 76,77 | - | 0 | yes | JS_COMPLETE | verify in browser |
 | partnerseite4_perfekt | 78 | no | - | - | 78 | 0 | no | NEEDS_SOURCE | add photo or .md transcript |
 | chapter32 | 80,81 | yes | esm | 80,81 | - | 2 | yes | JS_COMPLETE | verify in browser |
 | chapter33 | 82,83 | yes | esm | 82,83 | - | 0 | no | JS_COMPLETE | verify in browser |
@@ -146,7 +146,7 @@ These have a TOC entry in `deutsch_learning_app.html` but no `pageToChapterMap` 
 | chapter46 | 112,113 | yes | esm | 112,113 | - | 2 | yes | JS_COMPLETE | verify in browser |
 | partnerseite7_nebensaetze | 114,115 | no | - | - | 114,115 | 0 | no | NEEDS_SOURCE | add photo or .md transcript |
 | chapter47 | 116,117 | yes | esm | 116,117 | - | 2 | yes | JS_COMPLETE | verify in browser |
-| chapter48 | 118,119 | no | - | - | 118,119 | 0 | no | NEEDS_SOURCE | add photo or .md transcript |
+| chapter48 | 118,119 | no | - | - | 118,119 | 0 | yes | MISSING_JS | build chapter module |
 | chapter49 | 120,121 | yes | esm | 120,121 | - | 2 | yes | JS_COMPLETE | verify in browser |
 | chapter50 | 122,123 | yes | unknown | 122,123 | - | 0 | yes | JS_COMPLETE | verify in browser |
 | chapter51 | 124,125 | yes | esm | 124,125 | - | 2 | yes | JS_COMPLETE | verify in browser |
