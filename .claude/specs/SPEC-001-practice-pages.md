@@ -1,9 +1,10 @@
 # SPEC-001 — Practice Pages with AI
 
-**Version:** 4 (v2 = security review by Sol; v3 = user amendments; v4 = note→practice rename)
-**Status:** LOCKED — pending dev perspective pass, then implementation
-**Lead:** Claude Opus 5 · **Reviewer:** GPT-5.6 Sol · **Implementer:** Claude Sonnet 5
-**Branch:** `feature/ai_practice_chapter25` (orchestrator creates; `main` stays deployable)
+**Version:** 6 (v2 security review; v3 user amendments; v4 naming; v5 Sol-led/chapter-25-only; v6 handoff reconciliation)
+**Status:** LOCKED — dev perspective pass completed; all handoff findings reconciled below
+**Lead / Reviewer:** GPT-5.6 Sol · **Independent reviewer on request:** Claude Opus 5
+**Implementer:** Claude Sonnet 5
+**Branch:** `feature/ai_practice_chapter25` (created; `main` stays deployable)
 
 ---
 
@@ -18,8 +19,9 @@ corpus rendering, chat flow, approval flow, and persistence are provable **befor
 cost, or any provider dependency exists**.
 
 **A2 — Scope is chapter 25 only.** One corpus, one practice page. Do not author corpora for other
-chapters. The route stays generic so chapter 2+ costs nothing later, but only `practice/chapter25.json`
-ships.
+chapters. Only page 65 receives a practice entry point. Do not enumerate, inspect, inject into, or
+modify any other chapter, including chapter 50. The route may be structured for later extension,
+but this spec accepts only chapter 25 and ships only `practice/chapter25.json`.
 
 **A3 — PC web only. Drop iOS from scope.** The user will validate on desktop browser first and
 consider an iOS app later (Duolingo-style web + iOS; **no Android**). Consequences:
@@ -34,6 +36,10 @@ deliberate: `chapters/chapter50-note.js` is the user's own personal *note* page,
 for this feature would make the two permanently confusable in filenames, routes, and conversation.
 The only places "note" survives are references to that existing hands-off file. The user-facing
 heading may read *Praxis & Notizen*; every identifier says **practice**.
+
+**A6 — User-facing label.** The final chapter-25 entry-point label is **`💬 KI-Praxis`**. Use that
+exact label on page 65. It contains neither `Notizen` nor `Note` and does not use the 📝 icon,
+because those belong to the user's separate personal-note concept.
 
 **A4 — The dev gets a perspective pass before implementing.** Even with lead and reviewer agreed,
 `kyo_deutsch_dev_sonnet5` reviews this spec and raises concerns **before** writing code. If it
@@ -51,10 +57,10 @@ independent model family on the design.
 
 ## 1. Goal
 
-Each chapter gains a **practice page** (`Praxis & Notizen`). It holds a per-chapter **corpus** (grammar +
-vocabulary + phrases), a **free-form chat** with an AI constrained to that corpus, and an
-**Update corpus** action that folds what the user practiced back into their notes after explicit
-per-item approval.
+Chapter 25 gains a **practice page**. It holds a chapter-specific **corpus** (grammar, vocabulary,
+and phrases), a **free-form chat** with a deterministic mock constrained to that corpus, and an
+**Update corpus** action that folds what the user practiced into their user corpus layer after
+explicit per-item approval.
 
 Pilot: **chapter 25** (*Ich war, ich hatte* — Präteritum of *sein*/*haben*, A1, pages 64–65).
 
@@ -62,7 +68,8 @@ Pilot: **chapter 25** (*Ich war, ich hatte* — Präteritum of *sein*/*haben*, A
 
 Route: **`#practice-<chapter>`** — chapter 25's practice page is `#practice-25`.
 
-Chapter-scoped rather than page-scoped: a note belongs to the **chapter**, not a book page.
+Chapter-scoped rather than page-scoped: a practice corpus belongs to the **chapter**, not a book
+page.
 
 `app.js` currently handles only hashes starting `#page-`. Add a **parallel branch** for `#practice-`.
 Do **not** route practice pages through `pageToChapterMap`.
@@ -84,13 +91,13 @@ Browser (static)                     Backend (Cloud Run, private key)
   deutsch_learning_app.html            POST /api/practice  → LLM
   index.html  (byte-identical twin)    POST /api/corpus/extract → proposal
   app.js    ── #practice- branch          GET  /api/health
-  notes/chapterN.json  (seed corpus, version-controlled)
+  practice/chapter25.json  (seed corpus, version-controlled)
   localStorage         (user layer: additions, mistakes, session count)
 ```
 
 **Two-layer corpus.** Seed ships in the repo (book truth); user additions live in `localStorage`.
 
-> The repo is **public** and Pages-serves from `main`, so anything in `notes/*.json` is
+> The repo is **public** and Pages-serves from `main`, so anything in `practice/*.json` is
 > world-readable on a CDN. Keeping personal practice data out of the repo is therefore
 > **load-bearing privacy**, not tidiness.
 
@@ -103,7 +110,6 @@ Browser (static)                     Backend (Cloud Run, private key)
 ```json
 {
   "chapter": 25,
-  "level": "A1",
   "pages": [64, 65],
   "grammar": [
     {
@@ -120,12 +126,12 @@ Browser (static)                     Backend (Cloud Run, private key)
 }
 ```
 
-**B7 — no title drift.** The JSON carries **no `title` field**. Title and level are read at render
-time from the chapter module (`chapter25.js` exports
+**B7 — no title or level drift.** The JSON carries neither `title` nor `level`. Both are read at
+render time from the chapter module (`chapter25.js` exports
 `title: "Ich war, ich hatte (Präteritum: sein und haben)"`). One source of truth.
 
 **Source of truth:** derive corpus content from `chapters/chapter25.js`, which was built from the
-page scans. Do not invent grammar content.
+page scans. English translations are allowed. Do not invent German grammar content.
 
 **User layer (localStorage, key `practice-user-25`):**
 ```json
@@ -135,45 +141,31 @@ page scans. Do not invent grammar content.
 
 ## 5. Frontend
 
-### 5.1 Generic `#practice-` route — one renderer, all chapters
-In `app.js`, add a `#practice-<N>` branch alongside the existing `#page-` branch: validate `N`, fetch
-`practice/chapter<N>.json`, merge the localStorage user layer, render via a single
-`renderPracticePage(corpus, userLayer)`. **No per-chapter practice-page files.**
+### 5.1 Chapter-25 `#practice-` route
+In `app.js`, add a `#practice-<N>` branch alongside the existing `#page-` branch. This spec accepts
+only `N === 25`; every other value renders a safe practice placeholder. Fetch
+`practice/chapter25.json`, treat an absent localStorage layer as empty without writing one, and
+render via `renderPracticePage(corpus, userLayer)`.
 
-- **B6 — parse guard.** Accept only `/^\d+$/` with `1 ≤ N ≤ 85`. Anything else renders the
-  placeholder. Never interpolate the raw hash into HTML (see §5.4).
+- **B6 — parse guard.** Accept only the exact route `#practice-25`. Anything else renders
+  `renderPracticePlaceholder()` built with DOM nodes and `textContent`. Never interpolate the raw
+  hash into HTML (see §5.4).
 - **B5 — registration order.** `app.js` loads as `type="module"` (deferred), and the trailing
   `dispatchEvent(new Event('hashchange'))` is the cold-load bootstrap. The `#practice-` branch must be
   registered **before** that dispatch, or a cold load of `#practice-25` (bookmark, shared link)
   renders nothing. **Add this to Phase 1 verification.**
 - **B3 — honest placeholder.** Distinguish *404 / corpus not yet created* from *network failure*.
   Do not report one cause for the other.
+- **B9 — metadata fallback.** If `chapter25.js` metadata cannot be loaded, still render the
+  practice page with chapter number 25 and omit the unavailable title and level. Metadata failure
+  must not discard an otherwise valid corpus.
 
-### 5.2 Entry point — runtime injection, best-effort
+### 5.2 Entry point — page 65 only
 
-Append a **📝 Praxis & Notizen** link to the `page-navigation-footer` of each chapter's last page,
-computed in `app.js`. **Never hand-edit chapter modules** — `chapters/` is read-only to the dev.
-
-> **D1 — MUST FIX. Reproduced by the reviewer.** The naive inversion of `pageToChapterMap` selects
-> `"123-note"` as chapter 50's last page, because `parseInt("123-note") === 123` ties with `"123"`
-> and sorts last, and an unanchored `/^chapter(\d+)/` captures `chapter50-note` as chapter 50. The
-> link would be injected into the user's hands-off personal note page. **Three guards, all
-> required:**
-> 1. Anchor the module match: `/^chapter(\d+)$/` — rejects `chapter50-note`
-> 2. Reject any page key that is not `/^\d+$/` — rejects `"123-note"`
-> 3. Explicitly skip the `chapter50-note` module by name
->
-> This is unrecoverable by code review — it would look correct in a diff.
-
-> **D2 — the claim "all 85 chapters" is false for the entry point.** Measured: 61 chapters are in
-> `pageToChapterMap`, 44 have a module, and `chapter56.js` has **no** `page-navigation-footer`. So
-> footer injection reaches **43 of 85**. This is acceptable — a practice page is useless without a
-> corpus, and only chapter 25 gets one. **If a chapter's last page has no footer container, skip
-> silently.** Do not synthesise one. Do not edit `chapters/`. The remaining chapters stay reachable
-> by direct `#practice-N`.
-
-**Runtime only.** The link is injected into the HTML string in memory, **never written to disk** —
-on-disk mutation would change `chapters/` and break the validator's balanced-tag check.
+After page 65 of `chapter25` renders, locate its last `.page-navigation-footer` in the rendered DOM
+and append one link node with `appendChild()`. Use the exact A6 label **`💬 KI-Praxis`**. Do not
+string-splice HTML. Do not enumerate or inspect other chapters. Do not touch chapter modules on
+disk.
 
 ### 5.3 Practice page layout
 1. Header — chapter number, title and level **read from the chapter module** (B7)
@@ -182,20 +174,23 @@ on-disk mutation would change `chapters/` and break the validator's balanced-tag
 4. **Update corpus** button — disabled until the session has ≥ 5 exchanges
 5. Footer — back to the chapter's book pages
 
-> **D6 — be honest about CSS.** `style.css` contains only book-page furniture
-> (`.grid-syntax-table`, `.tip-box-lightbulb`, `.nav-btn`, …). **Nothing is reusable for a chat
-> transcript, message input, or approval list.** A sizeable new CSS block is expected and
-> appropriate. Put it in `style.css`, not inline. Do not contort book-layout classes into a chat UI
-> to appear "compliant."
+Reuse the existing page, header, level, grammar-grid, vocabulary-bank, hint, footer, and button
+classes where they fit. Add dedicated classes for chat transcript, bubbles, composer, status,
+disabled controls, and approval UI. Keep the composer in normal flow so it does not collide with
+the fixed table-of-contents control.
+
+When the chat first needs authorization, prompt once per page session for the local mock
+passphrase. Keep it only in a JavaScript variable or `sessionStorage`; never hardcode it and never
+write it to `localStorage`.
 
 ### 5.4 Rendering contract — **S3, MUST FIX, established in Phase 1**
 
 The app renders via `innerHTML` throughout. This feature introduces four untrusted sources: user
 practice text, model replies, extract proposals, and persisted user-layer items.
 
-**All dynamic content renders via `textContent` or an explicit escape helper. Never `innerHTML` for
-corpus items, chat messages, or proposals.** Static chrome may use template literals; **data never
-does.**
+Build the entire practice path with DOM nodes (`createElement`, `textContent`,
+`replaceChildren`). The practice path contains **zero** `innerHTML`, so the contract is
+mechanically checkable. Never use `innerHTML` for corpus items, chat messages, or proposals.
 
 > Why this is not self-harm: a `<img src=x onerror=...>` vocabulary item persisted via §7 becomes
 > **permanent stored XSS**, and the origin `kyokaen.github.io` is shared by **every GitHub Pages
@@ -245,7 +240,7 @@ The server builds the system prompt. **The client never supplies corpus content.
 > v1 was correct that the client supplies no corpus *content* — but it supplies the *selector*, and
 > specified no validation. The natural implementation is:
 > ```python
-> open(f"notes/chapter{chapter}.json")      # chapter from request body
+> open(f"practice/chapter{chapter}.json")   # chapter from request body
 > ```
 > `chapter = "25/../../../../proc/self/environ"` yields arbitrary file read. On Cloud Run, Secret
 > Manager is conventionally wired into an **environment variable** — so `/proc/self/environ`
@@ -300,6 +295,9 @@ The binding controls are:
 6. **CORS** — allowlist only; see §6.5.
 7. **Caps** — max messages per request, max body size, max output tokens.
 
+Development defaults are deliberately generous enough for normal browser testing while remaining
+explicit: `DAILY_REQUEST_BUDGET=10000` and `RATE_LIMIT_PER_MINUTE=120` per client IP.
+
 ### 6.5 Config
 | Env | Dev | Prod |
 |---|---|---|
@@ -309,7 +307,8 @@ The binding controls are:
 | `LLM_API_KEY` | gitignored `.env` — **not needed while `mock`** | Secret Manager |
 | `ALLOWED_ORIGINS` | `http://localhost:8899` | `https://kyokaen.github.io` |
 | `APP_PASSPHRASE` | `.env` | Secret Manager |
-| `DAILY_REQUEST_BUDGET` | generous | tuned |
+| `DAILY_REQUEST_BUDGET` | `10000` | tuned |
+| `RATE_LIMIT_PER_MINUTE` | `120` | tuned |
 
 > **S6 — `ALLOWED_ORIGINS` is the *page* origin, not the API origin.** In dev the page is
 > `:8899` and the API is `:8080`; the allowlist entry is **`:8899`**. Easy to get backwards.
@@ -386,8 +385,8 @@ browser profile.
 
 | # | Deliverable | Owner | Gate |
 |---|---|---|---|
-| **0** | **`.gitignore`: add `.env`, `.env.*`, `!.env.example`** + create `feature/ai_practice_chapter25` | **orchestrator** | **`git check-ignore .env` passes before any backend work** |
-| 1 | Corpus schema + `practice/chapter25.json` + `#practice-` route + static render + **§5.4 escape contract** | dev | Renders at `#practice-25`; **cold load works** (B5); no backend yet |
+| **0** | `.gitignore`: ignore secrets and `.venv/`; create branch | **lead** | `git check-ignore .env` and `git check-ignore api/.venv/` pass |
+| 1 | Corpus schema + `practice/chapter25.json` + `#practice-25` route + static render + §5.4 escape contract | dev | Cold load works; page 65 alone has `💬 KI-Praxis`; seeded `<img src=x onerror=alert(1)>` localStorage text renders literally without execution |
 | 2 | **Mock backend** (§6.6) + `/api/practice` + chat UI | dev | Chat works end to end against the mock; **zero provider calls** |
 | 3 | **Mock** `/api/corpus/extract` + approval UI + persistence + export/import | dev | Survives reload; nothing persists unapproved |
 | **V** | **USER VALIDATION — hard stop** | user | **User confirms the feature is right before any real LLM work** |
@@ -398,29 +397,24 @@ browser profile.
 > otherwise. Phase V is a **hard stop**, not a checkpoint: no provider adapter, no key, no cost
 > until the user has validated the feature on desktop.
 
-> **D4 — Phase 0 is mandatory and is the orchestrator's task.** Verified: `git check-ignore .env`
-> **fails today**. Phase 4 creates a `.env` holding a live Gemini key in a **public** repo that is
-> **also a CDN**. The dev agent has `.gitignore` as read-only and *cannot* fix this; v1 asserted it
-> as a check but assigned it to no one. This is the one mistake no later commit undoes.
+> **D4 — Phase 0 is mandatory and lead-owned.** `.env` is ignored. Before FastAPI setup, `.venv/`
+> is also ignored. The dev cannot change `.gitignore`.
 
 > **A3 — the PWA phase is removed.** Desktop web only for now; iOS is later, separate work.
 
 Phases 1–4 are entirely local. **Nothing deploys until the user says so.**
 
 ## 9. Out of scope
-`chapters/chapter50-note.js` (user's personal note page — leave untouched); **corpora for any
-chapter other than 25 (A2)**; **PWA, service worker, offline, iOS, Android (A3)**; multi-user
+**Any chapter other than 25, including chapter 50**; `chapters/chapter50-note.js` (leave untouched);
+**PWA, service worker, offline, iOS, Android (A3)**; multi-user
 accounts; audio/TTS; progress analytics; consolidating the duplicated entry points.
 
 > **B4 — but respect the duplication.** `index.html` and `deutsch_learning_app.html` are
 > **byte-identical**, and the live URL is the latter. Any `<link>`, `<script>`, or manifest tag this
 > feature adds must go into **both**, or they drift and one breaks.
 
-> **B2 — known scaling reality.** The hard cost at 85 chapters is not compute (~1k tokens each) but
-> **human corpus authoring**. The pilot's marginal cost is the project's cost.
-> `kyo_deutsch_professor` is the gate that makes each corpus trustworthy. For chapter 2+, the right
-> pattern is a `tools/` script emitting a **draft** JSON for human review that never auto-commits —
-> build it when needed, not now (Q3).
+The German corpus is reviewed by the user at Phase V. `kyo_deutsch_professor` remains dormant
+until the user explicitly activates it.
 
 ## 10. Definition of done (per phase)
 - Every numbered item implemented; nothing extra

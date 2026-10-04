@@ -14,6 +14,7 @@
 # Python bytecode from tools/
 __pycache__/
 *.pyc
+.venv/
 
 # Secrets — never commit. Public repo + public CDN; a leaked key is unrecoverable.
 .env
