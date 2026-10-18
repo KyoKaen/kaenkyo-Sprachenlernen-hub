@@ -42,7 +42,7 @@ exact label on page 65. It contains neither `Notizen` nor `Note` and does not us
 because those belong to the user's separate personal-note concept.
 
 **A4 — The dev gets a perspective pass before implementing.** Even with lead and reviewer agreed,
-`kyo_deutsch_dev_sonnet5` reviews this spec and raises concerns **before** writing code. If it
+`deutsch_dev_sonnet5` reviews this spec and raises concerns **before** writing code. If it
 raises something **critical**, the lead and reviewer must reconcile and re-investigate rather than
 wave it through. Trivial points both already agree on may be noted and passed over. This is a third
 independent model family on the design.
@@ -413,7 +413,7 @@ accounts; audio/TTS; progress analytics; consolidating the duplicated entry poin
 > **byte-identical**, and the live URL is the latter. Any `<link>`, `<script>`, or manifest tag this
 > feature adds must go into **both**, or they drift and one breaks.
 
-The German corpus is reviewed by the user at Phase V. `kyo_deutsch_professor` remains dormant
+The German corpus is reviewed by the user at Phase V. `deutsch_professor` remains dormant
 until the user explicitly activates it.
 
 ## 10. Definition of done (per phase)
