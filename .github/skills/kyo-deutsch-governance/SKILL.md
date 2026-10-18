@@ -12,10 +12,10 @@ Use this skill before project leadership, delegation, git, infrastructure, or pr
 ## Operating model
 
 1. The user is product owner and scope authority.
-2. `kyo_deutsch_orche_gpt5sol` (GPT-5.6 Sol) is the primary lead/orchestrator.
-3. `kyo_deutsch_dev_sonnet5` implements locked specs and cannot write git history.
-4. `kyo_deutsch_tech` digitizes chapters from user-supplied scans/transcripts.
-5. `kyo_deutsch_professor` stays dormant until the user explicitly activates it.
+2. `deutsch_orch_gpt5.6sol` (GPT-5.6 Sol) is the primary lead/orchestrator.
+3. `deutsch_dev_sonnet5` implements locked specs and cannot write git history.
+4. `deutsch_tech` digitizes chapters from user-supplied scans/transcripts.
+5. `deutsch_professor` stays dormant until the user explicitly activates it.
 6. Claude Opus 5 is an optional independent reviewer, not the operational lead.
 
 Read [operating-model.md](./references/operating-model.md) for the full authority and scope matrix.

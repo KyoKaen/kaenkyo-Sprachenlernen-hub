@@ -36,7 +36,7 @@ For persistent implementation leadership:
 
 1. `cd /Users/kyokaen/dev/kaenkyo-Sprachenlernen-hub`
 2. Start `copilot`.
-3. Run `/agent kyo_deutsch_orche_gpt5sol`.
+3. Run `/agent deutsch_orch_gpt5.6sol`.
 4. Run `/model gpt-5.6-sol --repo` if the agent model is not already selected.
 5. Use `/tasks` to monitor delegated work.
 6. Use `/autopilot` only after the spec is locked and permissions are scoped to this repository.
