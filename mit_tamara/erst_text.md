@@ -35,6 +35,17 @@ vocab:
 4. gefällt
 5. Der Unterricht (leçon)
 6. außer: sauf, hors de
+7. beide: les deux, alle beide, touts les deux.
+8. deshalb: donc, pour cette rainson
+9. Tierärztin: It combines Tier (animal) and Arzt (doctor).
+10. verbringen: passer du temps
+  • To spend / pass time or holidays:
+	• Zeit verbringen -> passer du temps
+	• Den Urlaub verbringen -> passer ses vacances
+	• Das Jahr im Ausland verbringen -> passer un an à l'étranger
+11. insgesamt: au total
+12. Zahnärzte: Dentistes
+13. wahrscheinlich: probably
 
 Antworten (questions)
 1. Paris ist die Hauptstadt vor Frankreich. Also, was ist die Hauptstadt vor Deutschland ?
@@ -43,7 +54,8 @@ Antworten (questions)
 4. Was macht Juliana in diesem Sommer in Freiburg ?
 5. Um wie viel Uhr beginnt sein Unterricht ? Und um wie viel Uhr endet es?
 6. Wie viel Shüler gibt es in ihrer Klasser ?
-7. Wer ist Julianas beter Fruendin ? Wohnest sie 
+7. Wer ist Julianas beter Fruendin ? Wohnest sie
+8. Warum will Marie Zahnärztin werden?
 
 
 
