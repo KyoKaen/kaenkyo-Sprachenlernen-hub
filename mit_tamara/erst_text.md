@@ -29,23 +29,26 @@ Jeden muss zehn Fragen zum Text stellen
 
 Kyo:
 vocab:
-1. Die Hauptstadt. Le capital
-2. Der Sprachkurs. 
+1. Die Hauptstadt: Le capital
+2. Der Sprachkurs: Le cours de langue
 3. Freiburg. Stadt in Süddeutschland.
-4. gefällt
+4. gefällt: gefallen, plaisir 
 5. Der Unterricht (leçon)
 6. außer: sauf, hors de
-7. beide: les deux, alle beide, touts les deux.
-8. deshalb: donc, pour cette rainson
-9. Tierärztin: It combines Tier (animal) and Arzt (doctor).
-10. verbringen: passer du temps
+7. weitere: plus
+8. liegen, liegt: situer
+9. beide: les deux, alle beide, touts les deux.
+10. enden, beenden, beendet: terminer
+11. deshalb: donc, pour cette rainson
+12. Tierärztin: It combines Tier (animal) and Arzt (doctor).
+13. verbringen: passer du temps
   • To spend / pass time or holidays:
 	• Zeit verbringen -> passer du temps
 	• Den Urlaub verbringen -> passer ses vacances
 	• Das Jahr im Ausland verbringen -> passer un an à l'étranger
-11. insgesamt: au total
-12. Zahnärzte: Dentistes
-13. wahrscheinlich: probably
+14. insgesamt: au total
+15. Zahnärzte: Dentistes
+16. wahrscheinlich: probably
 
 Antworten (questions)
 1. Paris ist die Hauptstadt vor Frankreich. Also, was ist die Hauptstadt vor Deutschland ?
@@ -56,6 +59,7 @@ Antworten (questions)
 6. Wie viel Shüler gibt es in ihrer Klasser ?
 7. Wer ist Julianas beter Fruendin ? Wohnest sie
 8. Warum will Marie Zahnärztin werden?
+9. Welche Universität studiert Juliana ?
 
 
 
